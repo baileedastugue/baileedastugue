@@ -1,3 +1,47 @@
-.navbar-brand img {
-    padding-left: 7vw;
+body {
+    background-color: #EFE7DC;
 }
+
+.navbar-brand img {
+    /* padding-left: 7vw; */
+    width: 100%;
+}
+
+.main-poster {
+    height: 40vw;
+    float: left;   
+    position: relative;
+}
+
+#about {
+    /* position: absolute; */
+    top: -6vw;
+    /* right: 30vw; */
+    z-index: 10;
+    width: 80%;
+    /* transform: rotate(-13deg); */
+}
+
+#posters {
+    height: 40vw;
+    overflow-y: auto;
+    margin-bottom: 5vw;
+}
+
+#about-me p { 
+    padding-top: 4%;
+}
+
+.p-right {
+    text-align: right;
+    padding-left: 30%;
+}
+
+.p-left {
+    text-align: left;
+    padding-right: 30%;
+}
+/* 
+#portfolio {
+
+} */
