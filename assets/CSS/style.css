@@ -39,6 +39,14 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 2%;
 }
 
+p a {
+    color: #ec583f;
+}
+
+p a:hover {
+    color: black;
+}
+
 .p-right {
     text-align: right;
     padding-left: 30%;
