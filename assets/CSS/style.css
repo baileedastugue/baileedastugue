@@ -42,14 +42,16 @@ body {
     padding-right: 30%;
 }
 
-#contact-container, #about-containervg {
+#contact-container, #about-container {
     position: relative;
 }
 
 #contact {
-    position: absolute;
+    /* position: absolute;
     right: 10%;
-    top: 5vw;
+    top: 5vw; */
+    float: right;
+    margin: 2% 10%;
 }
 
 #phone {
@@ -85,16 +87,6 @@ img.port {
     margin-top: 20%;
 }
 
-/* .port .title {
-    position: absolute;
-    width: inherit;
-    bottom: 8%;
-    background-color: #EFE7DC;
-    color: #ffffff;
-    padding: 10px;
-    text-align: center; 
-} */
-
 .port img:hover{
     opacity: 80%;
 }
@@ -110,4 +102,11 @@ img.port {
 .port a:hover{
     background-color: unset;
     text-decoration: none;
+}
+
+.link {
+    width: 150px;
+    float: right;
+    margin-top: 150px;
+    margin-right: 30px;
 }
