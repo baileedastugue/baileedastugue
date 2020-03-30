@@ -83,9 +83,9 @@ img.port {
     float: right;
 }
 
-#port-focus {
-    margin-top: 20%;
-}
+/* #port-focus {
+    margin-top: 40%;
+} */
 
 .port img:hover{
     opacity: 80%;
