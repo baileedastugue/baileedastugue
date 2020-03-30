@@ -3,6 +3,12 @@ body {
     overflow-x: hidden;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: #ec583f;
+    font-family: 'Alegreya Sans', sans-serif;
+    letter-spacing: 0.1vw;
+}
+
 .navbar-brand img {
     padding-left: 3vw;
     width: 100%;
@@ -92,12 +98,12 @@ img.port {
 
 
 a {
-    color: #ec583f;
+    color: black;
 }
 
 a:hover {
     font-style: italic;
-    color: black;
+    color: #ec583f;
     text-decoration: none;
     opacity: 80%;
 }
