@@ -47,9 +47,6 @@ body {
 }
 
 #contact {
-    /* position: absolute;
-    right: 10%;
-    top: 5vw; */
     float: right;
     margin: 2% 10%;
 }
@@ -71,21 +68,22 @@ body {
 }
 
 img.port {
-    width: 200px;
-    height: 133px;
+    width: 17vw;
+    height: 10vw;
     padding: 0px;
-    margin: 20px;
+    margin: 20px 0px 0px 10px;
     float: right;
 }
-
 
 #port-small {
-    float: right;
+    /* float: right; */
+    flex-wrap: wrap;
 }
 
-/* #port-focus {
-    margin-top: 40%;
-} */
+#port-focus {
+    float: left;
+    width: 40vw;
+}
 
 .port img:hover{
     opacity: 80%;
@@ -105,8 +103,26 @@ img.port {
 }
 
 .link {
-    width: 150px;
+    width: 10vw;
     float: right;
     margin-top: 150px;
     margin-right: 30px;
+}
+
+@media (max-width: 992px) { 
+    .link {
+        margin-top: 10vw;
+    }
+
+    #contact {
+        margin: 0%;
+    }
+
+    #phone {
+        margin-top: 12vw;;
+    }
+
+    #port-focus {
+        width: 100%;
+    }
 }
