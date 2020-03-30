@@ -32,7 +32,7 @@
         </a>
     </nav>
     
-    <div class="container-fluid">
+    <div class="container-fluid" id="about-container">
         <div class="row">
             <div class="col-1">
 
@@ -56,65 +56,50 @@
         </div>
     </div>
     <img src="assets/images/coffee2.png" alt="coffee cup on orange saucer" id="coffee" class="img-fluid ">
-    <div class="container-fluid">
+    
+    
+    <div class="container-fluid" id="portfolio-container">
         <div class="row">
-            <div class="col-12">
-                <img src="assets/images/portfolio.png" alt="portfolio" id="portfolio" class="img-fluid ">
+            <div class="col-md-7">
+                <img src="assets/images/portfolio.png" alt="portfolio" id="portfolio" class="img-fluid">
+
+                <div id="port-small">
+                    <img src="assets/images/wordGuessGame.png" class="img-fluid port" id="wordGuess">
+                    <img src="assets/images/rpgGame.png" class="img-fluid port" id="rpg">
+                    <img src="assets/images/triviaGame.png" class="img-fluid port" id="trivia">
+                    <img src="assets/images/giphyApp.png" class="img-fluid port" id="giphy">
+                    <img src="assets/images/RPS.png" class="img-fluid port" id="rps">
+                    <img src="assets/images/project1.png" class="img-fluid port" id="project1">
+                </div>
+
             </div>
-        </div>
-        <div class="row">
-            <div class="mb-4 d-block mx-auto">
-                <div class="port">
-                    <a href="https://baileedastugue.github.io/Word-Guess-Game/" target="_blank"><img src="assets/images/wordGuessGame.png" class="img-fluid"></a>
-                    <div class="title"><a href="https://baileedastugue.github.io/Word-Guess-Game/" target="_blank">Word-Guess Game</a></div>
-                </div>
-            </div>
-            <div class="mb-4 d-block mx-auto">
-                <div class="port">
-                    <a href="https://baileedastugue.github.io/RPG-game/" target="_blank"><img src="assets/images/rpgGame.png"class="img-fluid"/></a>
-                    <div class="title"><a href="https://baileedastugue.github.io/RPG-game/" target="_blank">RPG Game</a></div>
-                </div>
-            </div>       
-        </div>
-        <div class="row">
-            <div class="mb-4 d-block mx-auto">
-                <div class="port">
-                    <a href="https://baileedastugue.github.io/TriviaGame/" target="_blank"><img src="assets/images/triviaGame.png" class="img-fluid"/></a>
-                    <div class="title"><a href="https://baileedastugue.github.io/TriviaGame/" target="_blank">Billy Joel Trivia Game</a></div>
-                </div>
-            </div>
-            <div class="mb-4 d-block mx-auto">
-                <div class="port">
-                    <a href="https://baileedastugue.github.io/GiphyApp/" target="_blank"><img src="assets/images/giphyApp.png" class="img-fluid"/></a>
-                    <div class="title"><a href="https://baileedastugue.github.io/GiphyApp/" target="_blank">GIPHY + Spotify API App</a></div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="mb-4 d-block mx-auto">
-                <div class="port">
-                    <a href="https://baileedastugue.github.io/RPS-Multiplayer/" target="_blank"><img src="assets/images/RPS.png" class="img-fluid"/></a>
-                    <div class="title"><a href="https://baileedastugue.github.io/RPS-Multiplayer/" target="_blank">RPS Multiplayer Game</a></div>
-                </div>
-            </div>
-            <div class="mb-4 d-block mx-auto">
-                <div class="port">
-                    <a href="https://kianimal.github.io/Group_Project/" target="_blank"><img src="assets/images/project1.png" class="img-fluid"/></a>
-                    <div class="title"><a href="https://kianimal.github.io/Group_Project/" target="_blank">Marvel Group Project</a></div>
-                </div>
+
+            <div class="col-md-5">
+                <div class="card" id="port-focus">
+                    <img class="card-img-top" src="assets/images/compGiphy.png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Giphy API Application</h5>
+                      <a href="#" id="git">GitHub Repo</a><br>
+                      <a href="#" id="deployed">Deployed Site</a>
+                    </div>
+                  </div>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="contact-container">
         <div class="row">
             <div class="col-12">
+                <img src="assets/images/contact.png" alt="contact" id="contact" class="img-fluid">
                 <img src="assets/images/phone3.png" alt="phone with wire" id="phone" class="img-fluid ">
             </div>
+            <div class="col-12">
+                
+            </div>
         </div>
     </div>
 
-
+    <script src="assets/javascript/page.js"></script>
 </body>
 </html>
     

@@ -42,11 +42,22 @@ body {
     padding-right: 30%;
 }
 
+#contact-container, #about-containervg {
+    position: relative;
+}
+
+#contact {
+    position: absolute;
+    right: 10%;
+    top: 5vw;
+}
+
 #phone {
     z-index: -10;
     margin: 0px;
     padding: 0px;
-    /* right: -10px; */
+    position: absolute;
+    left: 0px;
 }
 
 #coffee {
@@ -57,19 +68,24 @@ body {
     top: 40vw;
 }
 
-.port {
-    position: relative;
-    width: 300px;
-}
-
-.port img {
-    width: 300px;
-    height: 200px;
+img.port {
+    width: 200px;
+    height: 133px;
     padding: 0px;
-    margin: 0px;
+    margin: 20px;
+    float: right;
 }
 
-.port .title {
+
+#port-small {
+    float: right;
+}
+
+#port-focus {
+    margin-top: 20%;
+}
+
+/* .port .title {
     position: absolute;
     width: inherit;
     bottom: 8%;
@@ -77,7 +93,7 @@ body {
     color: #ffffff;
     padding: 10px;
     text-align: center; 
-}
+} */
 
 .port img:hover{
     opacity: 80%;
