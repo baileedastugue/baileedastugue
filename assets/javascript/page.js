@@ -1,6 +1,6 @@
 var wordGuess = {
     id: "wordGuess",
-    largeImg: "'assets/images/compHM.png",
+    largeImg: "assets/images/compHM.png",
     title: "Hang Man Game",
     gitHub: "",
     deployed: ""
@@ -8,7 +8,7 @@ var wordGuess = {
 
 var trivia = {
     id: "trivia",
-    largeImg: "'assets/images/compBJ.png",
+    largeImg: "assets/images/compBJ.png",
     title: "Billy Joel Trivia Game",
     gitHub: "",
     deployed: ""
@@ -16,7 +16,7 @@ var trivia = {
 
 var rpgGame = {
     id: "rpg",
-    largeImg: "'assets/images/compRPG.png",
+    largeImg: "assets/images/compRPG.png",
     title: "Role Play Game",
     gitHub: "",
     deployed: ""
@@ -24,7 +24,7 @@ var rpgGame = {
 
 var rockPaperScissors = {
     id: "rps",
-    largeImg: "'assets/images/compRPS.png",
+    largeImg: "assets/images/compRPS.png",
     title: "Rock Paper Scissors Game",
     gitHub: "",
     deployed: ""
@@ -32,7 +32,7 @@ var rockPaperScissors = {
 
 var giphyAPP = {
     id: "giphy",
-    largeImg: "'assets/images/compGiphy.png",
+    largeImg: "assets/images/compGiphy.png",
     title: "Giphy API Application",
     gitHub: "",
     deployed: ""
@@ -40,7 +40,7 @@ var giphyAPP = {
 
 var marvel = {
     id: "project1",
-    largeImg: "'assets/images/compMarvel.png",
+    largeImg: "assets/images/compMarvel.png",
     title: "Marvel + OMDb API Group Project",
     gitHub: "",
     deployed: ""
@@ -54,7 +54,8 @@ var currentPick;
      currentPick = this.id;
      for (var i = 0; i < optionsArray.length; i++) {
          if (optionsArray[i].id === currentPick) {
-             console.log(optionsArray[i].title)
+             $(".card-img-top").attr("src", optionsArray[i].largeImg);
+            console.log(optionsArray[i].largeImg);
          }
      }
  })
