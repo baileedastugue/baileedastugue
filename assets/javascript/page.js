@@ -50,6 +50,14 @@ var optionsArray = [wordGuess, trivia, rpgGame, rockPaperScissors, giphyAPP, mar
 
 var currentPick;
 
+$(document).ready(function() {
+    var randomPick = Math.floor(Math.random() * optionsArray.length);
+    $(".card-img-top").attr("src", optionsArray[randomPick].largeImg);
+    $(".card-title").text(optionsArray[randomPick].title);
+    $("#git").attr("href", optionsArray[randomPick].gitHub);
+    $("#deployed").attr("href", optionsArray[randomPick].deployed);
+})
+
  $(".port").on("click", function() {
      currentPick = this.id;
      for (var i = 0; i < optionsArray.length; i++) {
