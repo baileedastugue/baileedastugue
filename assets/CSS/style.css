@@ -1,31 +1,32 @@
 body {
     background-color: #EFE7DC;
+    overflow-x: hidden;
 }
 
 .navbar-brand img {
-    /* padding-left: 7vw; */
+    padding-left: 3vw;
     width: 100%;
 }
 
 .main-poster {
     height: 40vw;
+    margin-right: 1vw;
     float: left;   
     position: relative;
 }
 
 #about {
-    /* position: absolute; */
     top: -6vw;
-    /* right: 30vw; */
     z-index: 10;
     width: 80%;
-    /* transform: rotate(-13deg); */
 }
 
 #posters {
     height: 40vw;
     overflow-y: auto;
     margin-bottom: 5vw;
+    display: flex;
+    justify-content: space-between;
 }
 
 #about-me p { 
