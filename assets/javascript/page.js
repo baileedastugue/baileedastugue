@@ -55,7 +55,7 @@ var currentPick;
      for (var i = 0; i < optionsArray.length; i++) {
          if (optionsArray[i].id === currentPick) {
              $(".card-img-top").attr("src", optionsArray[i].largeImg);
-            console.log(optionsArray[i].largeImg);
+             $(".card-title").text(optionsArray[i].title);
          }
      }
  })
