@@ -89,17 +89,16 @@ img.port {
     opacity: 80%;
 }
 
-.port a:hover {
+
+a {
+    color: #ec583f;
+}
+
+a:hover {
     font-style: italic;
-}
-
-.port a:visited{
     color: black;
-}
-
-.port a:hover{
-    background-color: unset;
     text-decoration: none;
+    opacity: 80%;
 }
 
 .link {
