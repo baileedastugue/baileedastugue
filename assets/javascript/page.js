@@ -46,7 +46,15 @@ var marvel = {
     deployed: "https://Kianimal.github.io/Marvel_Comics_Central"
 }
 
-var optionsArray = [wordGuess, trivia, rpgGame, rockPaperScissors, giphyAPP, marvel]
+var liri = {
+    id: "liri",
+    largeImg: "assets/images/iphone.png",
+    title: "LIRI - a Node.js application",
+    gitHub: "https://github.com/baileedastugue/liri-node-app",
+    deployed: "https://www.youtube.com/watch?v=oMQSGsOPXQE&feature=youtu.be"
+}
+
+var optionsArray = [wordGuess, trivia, rpgGame, rockPaperScissors, giphyAPP, marvel, liri]
 
 var currentPick;
 
