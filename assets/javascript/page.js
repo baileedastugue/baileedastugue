@@ -54,7 +54,16 @@ var liri = {
     deployed: "https://www.youtube.com/watch?v=oMQSGsOPXQE&feature=youtu.be"
 }
 
-var optionsArray = [wordGuess, trivia, rpgGame, rockPaperScissors, giphyAPP, marvel, liri]
+var wgNode = {
+    id: "wgNode",
+    largeImg: "assets/images/giphy.gif",
+    title: "Word-Guess Game using Node.js",
+    gitHub: "https://github.com/baileedastugue/wordGuess-node-app",
+    deployed: "https://www.youtube.com/watch?v=1iMAbYFv838&feature=youtu.be"
+}
+
+
+var optionsArray = [wordGuess, trivia, rpgGame, rockPaperScissors, giphyAPP, marvel, liri, wgNode]
 
 var currentPick;
 
