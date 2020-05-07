@@ -62,16 +62,24 @@ var wgNode = {
     deployed: "https://www.youtube.com/watch?v=1iMAbYFv838&feature=youtu.be"
 }
 
-// var bamazon = {
-//     id: "bamazon",
-//     largeImg: "NA",
-//     title: "Bamazon Application using Node.js and MySQL",
-//     gitHub: "",
-//     deployed: [],
-// }
+var bamazon = {
+    id: "bamazon",
+    largeImg: "assets/images/bamazon1.gif",
+    title: "Bamazon Application using Node.js and MySQL",
+    gitHub: "https://github.com/baileedastugue/bamazonApplication",
+    deployed: "https://www.youtube.com/watch?v=EL20Kvpa8Vs&list=PL4WQTJxFmC3xAJKh7wnPPy0tk3DWtbNkZ",
+}
+
+var friendFinder = {
+    id: "friendFinder",
+    largeImg: "assets/images/compFF.jpg",
+    title: "Furry Friend Finder",
+    gitHub: "https://github.com/baileedastugue/Friend-Finder",
+    deployed: "https://quiet-stream-07571.herokuapp.com/"
+}
 
 
-var optionsArray = [wordGuess, trivia, rpgGame, rockPaperScissors, giphyAPP, marvel, liri, wgNode]
+var optionsArray = [wordGuess, trivia, rpgGame, rockPaperScissors, giphyAPP, marvel, liri, wgNode, bamazon, friendFinder];
 
 var currentPick;
 
