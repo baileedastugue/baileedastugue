@@ -62,27 +62,54 @@ var wgNode = {
     deployed: "https://www.youtube.com/watch?v=1iMAbYFv838&feature=youtu.be"
 }
 
+// var bamazon = {
+//     id: "bamazon",
+//     largeImg: "NA",
+//     title: "Bamazon Application using Node.js and MySQL",
+//     gitHub: "",
+//     deployed: [],
+// }
+
 
 var optionsArray = [wordGuess, trivia, rpgGame, rockPaperScissors, giphyAPP, marvel, liri, wgNode]
 
 var currentPick;
 
-$(document).ready(function() {
-    var randomPick = Math.floor(Math.random() * optionsArray.length);
-    $(".card-img-top").attr("src", optionsArray[randomPick].largeImg);
-    $(".card-title").text(optionsArray[randomPick].title);
-    $("#git").attr("href", optionsArray[randomPick].gitHub);
-    $("#deployed").attr("href", optionsArray[randomPick].deployed);
-})
+function addCards() {
+    for (var i = 0; i < optionsArray.length; i++) {
+        var newDiv = $("<div>");
+        if (i === 0) {
+            newDiv.attr("class", "carousel-item active card");
+        }
+        else {
+            newDiv.attr("class", "carousel-item card");
+        }
+        var image = $("<img>");
+        image.attr("src", optionsArray[i].largeImg).attr("class", "port card-img-top");
+        newDiv.append(image);
+        var cardBody = $("<div>").attr("class", "card-body");
+        var cardTitle = $("<h5>").attr("class", "card-title").html(optionsArray[i].title);
+        cardBody.append(cardTitle);
+        var cardInfo = $("<p>").attr("class", "card-text")
+        var links = `<a href='${optionsArray[i].deployed}' target="_blank">Deployed</a> <br> <a href='${optionsArray[i].gitHub}' target="_blank">GitHub Repo</a>` ;
+        cardInfo.append(links);
+        cardBody.append(cardInfo);
+        newDiv.append(cardBody);
+        $(".carousel-inner").append(newDiv);
+    }
+};
 
- $(".port").on("click", function() {
-     currentPick = this.id;
-     for (var i = 0; i < optionsArray.length; i++) {
-         if (optionsArray[i].id === currentPick) {
-             $(".card-img-top").attr("src", optionsArray[i].largeImg);
-             $(".card-title").text(optionsArray[i].title);
-             $("#git").attr("href", optionsArray[i].gitHub);
-             $("#deployed").attr("href", optionsArray[i].deployed);
-         }
-     }
- })
+function addIndicators() {
+    for (var i = 0; i < optionsArray.length; i++) {
+        if (i === 0) {
+            var listItem = $("<li>").attr("data-target", "#demo").attr("data-slide-to", i).attr("class", "active");
+        }
+        else {
+            var listItem = $("<li>").attr("data-target", "#demo").attr("data-slide-to", i);
+        }
+        $(".carousel-indicators").append(listItem);
+    }
+}
+
+addCards();
+addIndicators();

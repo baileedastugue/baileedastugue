@@ -44,7 +44,7 @@ p a {
 }
 
 p a:hover {
-    color: black;
+    color: white;
 }
 
 .p-right {
@@ -82,12 +82,26 @@ p a:hover {
     top: 40vw;
 }
 
+.carousel {
+    background-color: black;
+    height: 55vw;
+    width: 65vw;
+}
+
+.card-text {
+    text-align: center;
+}
+
+.card {
+    background-color: black;
+}
+
 img.port {
-    width: 17vw;
-    height: 10vw;
+    /* width: 20vw; */
+    height: 40vw;
     padding: 0px;
     margin: 20px 0px 0px 10px;
-    float: right;
+    /* float: right; */
 }
 
 #port-small {
