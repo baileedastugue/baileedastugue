@@ -40,7 +40,7 @@ var giphyAPP = {
 
 var marvel = {
     id: "project1",
-    largeImg: "assets/images/compMarvel.png",
+    largeImg: "assets/images/compMarvel.jpg",
     title: "Marvel + OMDb API Group Project",
     gitHub: "https://github.com/Kianimal/Marvel_Comics_Central",
     deployed: "https://Kianimal.github.io/Marvel_Comics_Central"
@@ -91,7 +91,7 @@ function addCards() {
         var cardTitle = $("<h5>").attr("class", "card-title").html(optionsArray[i].title);
         cardBody.append(cardTitle);
         var cardInfo = $("<p>").attr("class", "card-text")
-        var links = `<a href='${optionsArray[i].deployed}' target="_blank">Deployed</a> <br> <a href='${optionsArray[i].gitHub}' target="_blank">GitHub Repo</a>` ;
+        var links = `<a href='${optionsArray[i].deployed}' target="_blank">Deployed</a> <br> <a href='${optionsArray[i].gitHub}' target="_blank"    >GitHub Repo</a>` ;
         cardInfo.append(links);
         cardBody.append(cardInfo);
         newDiv.append(cardBody);
