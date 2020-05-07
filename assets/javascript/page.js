@@ -64,7 +64,7 @@ var wgNode = {
 
 var bamazon = {
     id: "bamazon",
-    largeImg: "assets/images/bamazon1.gif",
+    largeImg: "assets/images/compBamazon.gif",
     title: "Bamazon Application using Node.js and MySQL",
     gitHub: "https://github.com/baileedastugue/bamazonApplication",
     deployed: "https://www.youtube.com/watch?v=EL20Kvpa8Vs&list=PL4WQTJxFmC3xAJKh7wnPPy0tk3DWtbNkZ",
