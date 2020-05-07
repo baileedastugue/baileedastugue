@@ -8,7 +8,7 @@ var wordGuess = {
 
 var trivia = {
     id: "trivia",
-    largeImg: "assets/images/compBJ.png",
+    largeImg: "assets/images/compBJ3.png",
     title: "Billy Joel Trivia Game",
     gitHub: "https://github.com/baileedastugue/TriviaGame",
     deployed: "https://baileedastugue.github.io/TriviaGame/"
@@ -16,7 +16,7 @@ var trivia = {
 
 var rpgGame = {
     id: "rpg",
-    largeImg: "assets/images/compRPG.png",
+    largeImg: "assets/images/compRPG.jpg",
     title: "Role Play Game",
     gitHub: "https://github.com/baileedastugue/RPG-game",
     deployed: "https://baileedastugue.github.io/RPG-game/"
@@ -24,7 +24,7 @@ var rpgGame = {
 
 var rockPaperScissors = {
     id: "rps",
-    largeImg: "assets/images/compRPS.png",
+    largeImg: "assets/images/compRPS.jpg",
     title: "Rock Paper Scissors Game",
     gitHub: "https://github.com/baileedastugue/RPS-Multiplayer",
     deployed: "https://baileedastugue.github.io/RPS-Multiplayer/"
@@ -32,7 +32,7 @@ var rockPaperScissors = {
 
 var giphyAPP = {
     id: "giphy",
-    largeImg: "assets/images/compGiphy.png",
+    largeImg: "assets/images/compGiphy.jpg",
     title: "Giphy API Application",
     gitHub: "https://github.com/baileedastugue/GiphyApp",
     deployed: "https://baileedastugue.github.io/GiphyApp/"
@@ -48,7 +48,7 @@ var marvel = {
 
 var liri = {
     id: "liri",
-    largeImg: "assets/images/iphone.png",
+    largeImg: "assets/images/liri.jpg",
     title: "LIRI - a Node.js application",
     gitHub: "https://github.com/baileedastugue/liri-node-app",
     deployed: "https://www.youtube.com/watch?v=oMQSGsOPXQE&feature=youtu.be"
