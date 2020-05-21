@@ -83,7 +83,7 @@ var project2 = {
     largeImg: "assets/images/CompP2.png",
     title: "Friendly Neighborhood Pet Finder",
     gitHub: "https://github.com/baileedastugue/ProjectTwo",
-    deployed: "https://project-bbers.herokuapp.com/homepage"
+    deployed: "https://project-bbers.herokuapp.com/"
 }
 
 
