@@ -80,7 +80,7 @@ var friendFinder = {
 
 var burg = {
     id: "burg",
-    largeImg: "assets/images/CompBurg.png",
+    largeImg: "assets/images/CompBurg2.png",
     title: "Build-a-Burg Application",
     gitHub: "https://github.com/baileedastugue/burger-app",
     deployed: "https://build-a-burg.herokuapp.com/"
