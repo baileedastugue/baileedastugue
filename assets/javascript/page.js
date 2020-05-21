@@ -78,6 +78,14 @@ var friendFinder = {
     deployed: "https://quiet-stream-07571.herokuapp.com/"
 }
 
+var burg = {
+    id: "burg",
+    largeImg: "assets/images/CompBurg.png",
+    title: "Build-a-Burg Application",
+    gitHub: "https://github.com/baileedastugue/burger-app",
+    deployed: "https://build-a-burg.herokuapp.com/"
+}
+
 var project2 = {
     id: "project2",
     largeImg: "assets/images/CompP2.png",
@@ -87,7 +95,7 @@ var project2 = {
 }
 
 
-var optionsArray = [wordGuess, trivia, rpgGame, rockPaperScissors, giphyAPP, marvel, liri, wgNode, bamazon, friendFinder, project2];
+var optionsArray = [wordGuess, trivia, rpgGame, rockPaperScissors, giphyAPP, marvel, liri, wgNode, bamazon, friendFinder, burg, project2];
 
 var currentPick;
 
