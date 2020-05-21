@@ -114,6 +114,10 @@ p a:hover {
     opacity: 100%;
 }
 
+.card-body p a:hover{
+    color: black;
+}   
+
 img.port {
     /* width: 20vw; */
     height: 40vw;
