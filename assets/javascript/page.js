@@ -78,8 +78,16 @@ var friendFinder = {
     deployed: "https://quiet-stream-07571.herokuapp.com/"
 }
 
+var project2 = {
+    id: "project2",
+    largeImg: "assets/images/CompP2.png",
+    title: "Friendly Neighborhood Pet Finder",
+    gitHub: "https://github.com/baileedastugue/ProjectTwo",
+    deployed: "https://project-bbers.herokuapp.com/homepage"
+}
 
-var optionsArray = [wordGuess, trivia, rpgGame, rockPaperScissors, giphyAPP, marvel, liri, wgNode, bamazon, friendFinder];
+
+var optionsArray = [wordGuess, trivia, rpgGame, rockPaperScissors, giphyAPP, marvel, liri, wgNode, bamazon, friendFinder, project2];
 
 var currentPick;
 
