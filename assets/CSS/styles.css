@@ -1,0 +1,248 @@
+body {
+  background-color: #EFE7DC;
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  font-style: italic;
+  color: #ec583f;
+  text-decoration: none;
+  opacity: 80%;
+}
+
+.img-container {
+  overflow: hidden;
+}
+
+.img-container #coffee {
+  opacity: 50%;
+  width: 30vw;
+  position: absolute;
+  z-index: -10;
+  right: -8vw;
+  top: 27vw;
+  padding: 0px;
+  margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ec583f;
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 0.1em;
+}
+
+#portfolio-container h1 {
+  text-align: left;
+  font-family: 'Playfair Display', serif;
+  color: black;
+  font-size: 4em;
+}
+
+#portfolio-container .carousel {
+  opacity: 100%;
+  height: 40vw;
+  width: 65vw;
+  margin-bottom: 3vw;
+}
+
+#portfolio-container .carousel .carousel-inner .card {
+  height: 50vw;
+}
+
+#portfolio-container .carousel .carousel-inner .card-text {
+  text-align: center;
+}
+
+#portfolio-container .carousel .carousel-inner .card-body {
+  opacity: 100%;
+  height: 10vw;
+  overflow: auto;
+}
+
+#portfolio-container .carousel .carousel-inner .card-body p a:hover {
+  color: black;
+}
+
+#portfolio-container .carousel .carousel-inner .card-body .port-info {
+  text-align: justify;
+  margin: 1vw 6vw;
+}
+
+#portfolio-container .carousel .carousel-inner img.port {
+  height: 40vw;
+  padding: 0px;
+}
+
+#portfolio-container .carousel .carousel-inner img.port img:hover {
+  opacity: 80%;
+}
+
+#contact-container {
+  margin-top: 2vw;
+  height: 45vw;
+  background-image: url("../images/phone3.png");
+  background-size: cover;
+}
+
+#contact-container h1 {
+  text-align: right;
+  padding-top: 5vw;
+  font-family: 'Playfair Display', serif;
+  color: black;
+  font-size: 4em;
+}
+
+#contact-container .link {
+  width: 10vw;
+  float: right;
+  margin-top: 15vw;
+  margin-right: 30px;
+}
+
+#about-container h1 {
+  text-align: left;
+  font-family: 'Playfair Display', serif;
+  color: black;
+  font-size: 4em;
+}
+
+#about-container #posters {
+  height: 40vw;
+  overflow-y: auto;
+  margin-bottom: 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#about-container #posters .main-poster {
+  height: 40vw;
+  margin-right: 1vw;
+  float: left;
+}
+
+#about-container #about-me img {
+  width: 30vw;
+  position: absolute;
+  right: -10vw;
+}
+
+#about-container #about-me p {
+  padding-top: 2%;
+}
+
+.navbar-brand img {
+  padding-left: 3vw;
+  width: 100%;
+}
+
+p a {
+  color: #ec583f;
+}
+
+p a:hover {
+  color: white;
+}
+
+.p-right {
+  text-align: right;
+  padding-left: 30%;
+}
+
+.p-left {
+  text-align: left;
+  padding-right: 30%;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media (max-width: 1500px) {
+  #contact-container {
+    margin-top: 10vw;
+  }
+  .img-container #coffee {
+    margin-top: 10vw;
+    top: 29vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  .img-container #coffee {
+    margin-top: 20vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  .p-right {
+    padding-left: 20%;
+  }
+  #contact-container {
+    margin-top: 10vw;
+  }
+}
+
+@media (max-width: 991px) {
+  .img-container #coffee {
+    top: 70vw;
+  }
+}
+
+@media (max-width: 880px) {
+  .img-container #coffee {
+    margin-top: 39vw;
+  }
+}
+
+@media (max-width: 750px) {
+  .img-container #coffee {
+    margin-top: 60vw;
+  }
+  #contact-container {
+    margin-top: 10vw;
+  }
+}
+
+@media (max-width: 615px) {
+  .img-container #coffee {
+    margin-top: 100vw;
+  }
+  #contact-container .link {
+    margin-top: 5vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .p-right {
+    padding-left: 0%;
+  }
+  .img-container #coffee {
+    top: 100vw;
+  }
+}
+
+@media (max-width: 450px) {
+  .img-container #coffee {
+    top: 150vw;
+  }
+  #contact-container h1 {
+    color: black;
+    -webkit-text-fill-color: white;
+    /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
