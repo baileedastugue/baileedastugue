@@ -106,8 +106,17 @@ var project2 = {
     deployed: "https://project-bbers.herokuapp.com/"
 }
 
+var austin = {
+    id: "austin",
+    largeImg: "assets/images/AustinComp.png",
+    title: "Austin Accumulated",
+    about: "An application using Cheerio, Mongoose, Axios, and Express that scrapes Austin Eater articles. Allows users to comment on articles, view previous comments, scrape new articles, and clear articles.",
+    gitHub: "https://github.com/baileedastugue/austin-documented",
+    deployed: "https://austin-accumulated.herokuapp.com/"
+}
 
-var optionsArray = [wordGuess, trivia, rpgGame, giphyAPP, marvel, liri, wgNode, bamazon, friendFinder, burg, project2];
+
+var optionsArray = [wordGuess, trivia, rpgGame, giphyAPP, marvel, liri, wgNode, bamazon, friendFinder, burg, project2, austin];
 
 var currentPick;
 
