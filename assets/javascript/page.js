@@ -101,7 +101,7 @@ var project2 = {
     id: "project2",
     largeImg: "assets/images/CompP2.png",
     title: "Friendly Neighborhood Pet Finder",
-    about: "A group project utilizing MySQL, the PetFinder API, and SASS. As lead front-end developer, I was responsible for all page aesthetics (HTML, CSS, JavaScript) and collaborating with the back-end team. My favorite features were the two implementations of Bootstrap carousels.",
+    about: "A group project utilizing MySQL, the PetFinder API, and SASS. As lead front-end developer, I was responsible for all page aesthetics (HTML, CSS, JavaScript) and collaborating with the back-end team. All banners, images, and logos were drawn digitally myself. My favorite features were the two implementations of Bootstrap carousels.",
     gitHub: "https://github.com/baileedastugue/ProjectTwo",
     deployed: "https://project-bbers.herokuapp.com/"
 }
