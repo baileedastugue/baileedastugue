@@ -115,8 +115,17 @@ var austin = {
     deployed: "https://austin-accumulated.herokuapp.com/"
 }
 
+var click = {
+    id: "click",
+    largeImg: "assets/images/clickGame.png",
+    title: "Huperzia - a memory game",
+    about: "Huperzia is known as a memory enhancer and this application is just that. Test your memory by ensuring you never click on the same plant twice. Application utilizes React to shuffle plants and update your score + high score.",
+    gitHub: "https://github.com/baileedastugue/click-and-memorize",
+    deployed: "https://baileedastugue.github.io/click-and-memorize/"
+}
 
-var optionsArray = [wordGuess, trivia, rpgGame, giphyAPP, marvel, liri, wgNode, bamazon, friendFinder, burg, project2, austin];
+
+var optionsArray = [wordGuess, trivia, rpgGame, giphyAPP, marvel, liri, wgNode, bamazon, friendFinder, burg, project2, austin, click];
 
 var currentPick;
 
