@@ -1,4 +1,5 @@
 $background: #EFE7DC;
+$focusColor: #ec583f;
 
 body {
     background-color: $background;
@@ -12,7 +13,7 @@ a {
 
 a:hover {
     font-style: italic;
-    color: #ec583f;
+    color: $focusColor;
     text-decoration: none;
     opacity: 80%;
 }
@@ -32,7 +33,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #ec583f;
+    color: $focusColor;
     font-family: 'Permanent Marker', cursive;
     letter-spacing: 0.1em;
 }
@@ -57,9 +58,12 @@ h1, h2, h3, h4, h5, h6 {
                 text-align: center;
             }
             .card-body {
+                
+                background-color: $background;
                 opacity: 100%;
                 height: 10vw;
                 overflow: auto;
+                font-size: 1vw;
                 p a:hover{
                     color: black;
                 }
@@ -79,6 +83,25 @@ h1, h2, h3, h4, h5, h6 {
     }
     
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+/* Track */
+::-webkit-scrollbar-track {
+    background:$background;
+  }
+
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: $focusColor;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: white;
+  }
 
 #contact-container {
     margin-top: 2vw;
@@ -102,6 +125,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #about-container {
+    // margin-left: 5vw;
     h1 {
         text-align: left;
         font-family: 'Playfair Display', serif;
@@ -109,20 +133,24 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 4em;
     }
     #posters {
-        height: 40vw;
+        height: 30vw;
         overflow-y: auto;
-        margin-bottom: 5vw;
+        margin-bottom: 2vw;
         display: flex;
         justify-content: space-between;
+        border-radius: 0vw 0vw 50vw 0vw;
+        transform: scaleX(-1);
         .main-poster {
-            height: 40vw;
+            height: 30vw;
             margin-right: 1vw;
-            float: left;   
+            img {
+                float: right;   
+            }
         }
     }
     #about-me {
         img {
-            width: 30vw;
+            width: 40vw;
             position: absolute;
             right: -10vw;    
         }
@@ -149,6 +177,7 @@ p {
 .p-right {
     text-align: right;
     padding-left: 30%;
+    margin-right: 8vw;
 }
 
 .p-left {
