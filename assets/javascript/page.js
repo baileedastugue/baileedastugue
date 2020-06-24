@@ -3,7 +3,7 @@ var wordGuess = {
      largeImg: 'assets/images/compHM.png',
      title: 'Chicken Little',
      about:
-          "A word-guess game completed entirely with vanilla JavaScript - meaning there's not an ounce of jQuery to be found. All images hand-drawn with love.",
+          "A word-guess game completed entirely with vanilla JavaScript - meaning there's not an ounce of jQuery to be found. A PG-play on Hangman, help Chicken Little guess the every letter in the unknown words before his sky falls. All images hand-drawn with love - watch the background change with each wrong guess!",
      gitHub: 'https://github.com/baileedastugue/Word-Guess-Game',
      deployed: 'https://baileedastugue.github.io/Word-Guess-Game/',
 };
@@ -42,7 +42,7 @@ var giphyAPP = {
      largeImg: 'assets/images/compGiphy.jpg',
      title: 'Musically GIPH-ted',
      about:
-          'Search for GIFs of bands and musicians with this application, which implements the GIPHY API. Save your favorite searches and find them next time, with the help of session storage.',
+          'Search for GIFs of bands and musicians with this application, which implements the GIPHY API. Save your favorite searches and find them next time, with the help of session storage. Future expansion of this mini-app includes searching the Spotify API for each saved artist.',
      gitHub: 'https://github.com/baileedastugue/GiphyApp',
      deployed: 'https://baileedastugue.github.io/GiphyApp/',
 };
@@ -54,14 +54,14 @@ var marvel = {
      about:
           'A collaborative group project utilizing the Marvel and OMDb APIs. Personal responsibilites for this project include all HTML and CSS, with the exception of the search bar, implementing the search history, and returning the movie posters',
      gitHub: 'https://github.com/Kianimal/Marvel_Comics_Central',
-     deployed: 'https://Kianimal.github.io/Marvel_Comics_Central',
+     deployed: 'https://kianimal.github.io/Marvel-Comics-Central/',
 };
 
 var liri = {
      id: 'liri',
      largeImg: 'assets/images/liri.jpg',
      title: 'LIRI',
-     about: '',
+     about: 'A Node-based',
      gitHub: 'https://github.com/baileedastugue/liri-node-app',
      deployed: 'https://www.youtube.com/watch?v=oMQSGsOPXQE&feature=youtu.be',
 };
@@ -89,7 +89,8 @@ var friendFinder = {
      id: 'friendFinder',
      largeImg: 'assets/images/compFF.jpg',
      title: 'Furry Friend Finder',
-     about: '',
+     about:
+          "The application that acted as inspiration for the Friendly Neighborhood Pet Finder project! After answering a series of pet-preference questions, users get matched to their furry soulmate! Matches are made through comparing each of the user's responses to the respective qualities each pup possesses. A full-stack application using Node and Express Servers.",
      gitHub: 'https://github.com/baileedastugue/Friend-Finder',
      deployed: 'https://quiet-stream-07571.herokuapp.com/',
 };
@@ -118,7 +119,7 @@ var austin = {
      largeImg: 'assets/images/AustinComp.png',
      title: 'Austin Accumulated',
      about:
-          'An application using Cheerio, Mongoose, Axios, and Express that scrapes Austin Eater articles. Allows users to comment on articles, view previous comments, scrape new articles, and clear articles.',
+          'An application using Cheerio, Mongoose, Axios, and Express that scrapes three different Austin, Texas-focused websites: Austin Eater, Austin Culture Map, and Austin Monthly. Allows users to comment on articles, view previous comments, scrape new articles, clear articles, and save articles they want to come back to.',
      gitHub: 'https://github.com/baileedastugue/austin-documented',
      deployed: 'https://austin-accumulated.herokuapp.com/',
 };
@@ -171,8 +172,9 @@ function addCards() {
                .html(optionsArray[i].title);
           cardBody.append(cardTitle);
           var cardInfo = $('<p>').attr('class', 'card-text');
-          var links = `<a href='${optionsArray[i].deployed}' target="_blank">Deployed</a> <br> <a href='${optionsArray[i].gitHub}' target="_blank"    >GitHub Repo</a>`;
-          cardInfo.append(links);
+          var link1 = `<a href='${optionsArray[i].deployed}' target="_blank">Deployed</a>`;
+          var link2 = `<a href='${optionsArray[i].gitHub}' target="_blank">GitHub Repo</a>`;
+          cardInfo.append(link1 + ' | ' + link2);
           var about = $("<p class='port-info'>").text(optionsArray[i].about);
           cardInfo.append(about);
           cardBody.append(cardInfo);
