@@ -53,6 +53,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #portfolio-container .carousel .carousel-inner .card {
   height: 50vw;
+  outline: none;
+  border: none;
 }
 
 #portfolio-container .carousel .carousel-inner .card-text {
@@ -60,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #portfolio-container .carousel .carousel-inner .card-body {
-  background-color: #EFE7DC;
+  background-color: white;
   opacity: 100%;
   height: 10vw;
   overflow: auto;
@@ -74,6 +76,16 @@ h1, h2, h3, h4, h5, h6 {
 #portfolio-container .carousel .carousel-inner .card-body .port-info {
   text-align: justify;
   margin: 1vw 6vw;
+}
+
+#portfolio-container .carousel .carousel-inner .card-body .tech {
+  text-align: left;
+  margin: 1vw 6vw;
+}
+
+#portfolio-container .carousel .carousel-inner .card-body .tech em {
+  color: #ec583f;
+  font-style: bold;
 }
 
 #portfolio-container .carousel .carousel-inner img.port {
@@ -105,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #contact-container {
-  margin-top: 2vw;
+  margin-top: 5vw;
   height: 45vw;
   background-image: url("../images/phone3.png");
   background-size: cover;
@@ -184,6 +196,15 @@ p a:hover {
   text-align: right;
   padding-left: 30%;
   margin-right: 8vw;
+}
+
+.p-right em {
+  color: #ec583f;
+}
+
+.p-right .text-focus {
+  font-size: 1vw;
+  font-weight: 200;
 }
 
 .p-left {

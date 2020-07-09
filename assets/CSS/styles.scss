@@ -53,13 +53,15 @@ h1, h2, h3, h4, h5, h6 {
         .carousel-inner {
             .card {
                 height:50vw;
+                outline: none;
+            border: none;
             }
             .card-text {
                 text-align: center;
+              
             }
             .card-body {
-                
-                background-color: $background;
+                background-color: white;
                 opacity: 100%;
                 height: 10vw;
                 overflow: auto;
@@ -70,6 +72,14 @@ h1, h2, h3, h4, h5, h6 {
                 .port-info {
                     text-align: justify;
                     margin: 1vw 6vw;
+                }
+                .tech {
+                    text-align: left;
+                    margin: 1vw 6vw;
+                    em { 
+                        color: $focusColor;
+                        font-style: bold;
+                    }
                 }
             }
             img.port {
@@ -104,10 +114,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 
 #contact-container {
-    margin-top: 2vw;
+    margin-top: 5vw;
     height: 45vw;
     background-image: url("../images/phone3.png");
     background-size: cover;
+    
     
     h1 {
         text-align: right;
@@ -167,7 +178,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     a {
-        color: #ec583f;
+        color: $focusColor;
     }
     a:hover {
         color: white;
@@ -178,6 +189,18 @@ p {
     text-align: right;
     padding-left: 30%;
     margin-right: 8vw;
+    em {
+        // font-style: italic;
+        color: $focusColor;
+    }    
+    .text-focus {
+        // background-color: $focusColor;
+        // color: white;
+        // padding: 2px;
+        font-size: 1vw;
+        font-weight: 200;
+        // margin: 2px;
+    }
 }
 
 .p-left {
