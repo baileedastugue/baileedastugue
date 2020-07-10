@@ -138,25 +138,44 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #contact-container {
-  margin-top: 5vw;
-  height: 45vw;
-  background-image: url("../images/phone3.png");
-  background-size: cover;
+  position: relative;
 }
 
-#contact-container h1 {
+#contact-container .container {
+  height: 45vw;
+}
+
+#contact-container .container h1 {
   text-align: right;
+  opacity: 100%;
   padding-top: 5vw;
   font-family: 'Playfair Display', serif;
   color: black;
   font-size: 4em;
 }
 
-#contact-container .link {
+#contact-container .container .link-container {
+  padding-right: 8vw;
+}
+
+#contact-container .container .link-container .link {
+  opacity: 100%;
   width: 10vw;
   float: right;
   margin-top: 15vw;
   margin-right: 30px;
+}
+
+#contact-container::after {
+  content: "";
+  background: url("../images/phone3.png");
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -10;
 }
 
 #about-container h1 {
@@ -252,9 +271,6 @@ p a:hover {
   #about-container #postersCarousel .main-poster {
     height: 35vw;
   }
-  #contact-container {
-    margin-top: 10vw;
-  }
   .img-container {
     overflow: hidden;
   }
@@ -288,6 +304,9 @@ p a:hover {
   #portfolio-container .carousel .carousel-inner .card .card-body {
     height: 15vw;
   }
+  #contact-container .container .link-container {
+    padding-right: 14vw;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -302,7 +321,10 @@ p a:hover {
     padding-left: 0%;
   }
   #contact-container {
-    margin-top: 10vw;
+    height: 56vw;
+  }
+  #contact-container .container .link-container {
+    padding-right: 20vw;
   }
 }
 
@@ -316,11 +338,25 @@ p a:hover {
   .img-container #coffee {
     top: 30vw;
   }
+  #contact-container .container .link-container {
+    padding-right: 8vw;
+  }
+  #contact-container .container .link-container .link {
+    width: 12vw;
+  }
 }
 
 @media (max-width: 880px) {
   .img-container #coffee {
     margin-top: 39vw;
+  }
+  #contact-container .container .link-container {
+    padding-right: 13vw;
+  }
+  #contact-container .container .link-container .link {
+    opacity: 100%;
+    width: 12vw;
+    margin-top: 10vw;
   }
 }
 
@@ -328,14 +364,8 @@ p a:hover {
   .img-container #coffee {
     margin-top: 60vw;
   }
-  #contact-container {
-    margin-top: 10vw;
-  }
   #portfolio-container .carousel .carousel-indicators {
     bottom: 15vw;
-  }
-  #portfolio-container .carousel a.carousel-control-next, #portfolio-container .carousel a.carousel-control-prev {
-    margin: 20vw -4vw 0vw;
   }
   #portfolio-container .carousel .carousel-inner .card {
     height: 65vw;
@@ -349,20 +379,21 @@ p a:hover {
   #portfolio-container .carousel .carousel-inner .card img.port {
     height: 50vw;
   }
+  #contact-container .container .link-container {
+    padding-right: 5vw;
+  }
+  #contact-container .container .link-container .link {
+    width: 12vw;
+    margin-top: 10vw;
+  }
 }
 
 @media (max-width: 615px) {
   .img-container #coffee {
     margin-top: 100vw;
   }
-  #contact-container .link {
-    margin-top: 5vw;
-  }
   #portfolio-container .carousel .carousel-indicators {
     bottom: 20vw;
-  }
-  #portfolio-container .carousel a.carousel-control-next, #portfolio-container .carousel a.carousel-control-prev {
-    margin: 20vw -45px 0vw;
   }
   #portfolio-container .carousel .carousel-inner .card {
     height: 70vw;
@@ -372,6 +403,17 @@ p a:hover {
   }
   #portfolio-container .carousel .carousel-inner .card img.port {
     height: 50vw;
+  }
+  #contact-container .container {
+    height: 60vw;
+  }
+  #contact-container .container .link-container {
+    padding-right: 9vw;
+  }
+  #contact-container .container .link-container .link {
+    width: 12vw;
+    float: right;
+    margin-top: 5vw;
   }
 }
 
@@ -399,6 +441,18 @@ p a:hover {
   #portfolio-container .carousel .carousel-inner .card img.port {
     height: 55vw;
   }
+  #contact-container .container {
+    height: 65vw;
+  }
+  #contact-container .container .link-container {
+    padding-right: 15vw;
+  }
+  #contact-container .container .link-container .link {
+    width: 12vw;
+  }
+  #contact-container::after {
+    opacity: 60%;
+  }
 }
 
 @media (max-width: 450px) {
@@ -425,8 +479,16 @@ p a:hover {
   #portfolio-container .carousel .carousel-inner .card img.port {
     height: 55vw;
   }
-  #contact-container h1 {
-    color: black;
+  #contact-container .container {
+    height: 69vw;
+  }
+  #contact-container .container .link-container {
+    padding-right: 0vw;
+  }
+  #contact-container .container .link-container .link {
+    width: 15vw;
+    margin-top: 0vw;
+    float: right;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -132,23 +132,40 @@ h1, h2, h3, h4, h5, h6 {
   }
 
 #contact-container {
-    margin-top: 5vw;
-    height: 45vw;
-    background-image: url("../images/phone3.png");
-    background-size: cover;
-    h1 {
-        text-align: right;
-        padding-top: 5vw;
-        font-family: 'Playfair Display', serif;
-        color: black;
-        font-size: 4em;
+    position: relative;
+    .container {
+        height: 45vw;
+        h1 {
+            text-align: right;
+            opacity: 100%;
+            padding-top: 5vw;
+            font-family: 'Playfair Display', serif;
+            color: black;
+            font-size: 4em;
+        }
+        .link-container {
+            padding-right: 8vw;
+            .link {
+                opacity: 100%;
+                width: 10vw;
+                float: right;
+                margin-top: 15vw;
+                margin-right: 30px;
+            }
+        }
     }
-    .link {
-        width: 10vw;
-        float: right;
-        margin-top: 15vw;
-        margin-right: 30px;
-    }
+}
+
+#contact-container::after {
+    content: "";
+    background: url("../images/phone3.png");
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -10;
 }
 
 #about-container {
@@ -240,9 +257,6 @@ p {
             }
         }
     }
-    #contact-container {
-        margin-top: 10vw;
-    }  
     .img-container {
         overflow: hidden;
         #coffee {
@@ -286,6 +300,13 @@ p {
                 }
             }
         }
+    }
+    #contact-container {
+        .container {
+            .link-container {
+                padding-right: 14vw;
+            }
+        }
     }       
 }
 
@@ -303,8 +324,14 @@ p {
         padding-left: 0%;
     }
     #contact-container {
-        margin-top: 10vw;
-    }  
+        height: 56vw;
+        .container {
+            .link-container {
+                padding-right: 20vw;
+            }
+        }
+    }
+  
 }
 
 @media (max-width: 991px) {
@@ -321,12 +348,34 @@ p {
             top: 30vw;
         }
     }
+    #contact-container {
+        .container {
+            .link-container {
+                padding-right: 8vw;
+                .link {
+                    width: 12vw;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 880px) {
     .img-container {
         #coffee {
             margin-top: 39vw;
+        }
+    }
+    #contact-container {
+        .container {
+            .link-container {
+                padding-right: 13vw;
+                .link {
+                    opacity: 100%;
+                    width: 12vw;
+                    margin-top: 10vw;
+                }
+            }
         }
     }
 }
@@ -337,23 +386,16 @@ p {
             margin-top: 60vw;
         }
     }
-    #contact-container {
-        margin-top: 10vw;
-    }
     #portfolio-container{
         .carousel {
             .carousel-indicators {
                 bottom: 15vw;
-            }
-            a.carousel-control-next, a.carousel-control-prev {
-                margin: 20vw -4vw 0vw;
             }
             .carousel-inner {
                 .card {
                     height: 65vw;
                    .card-body {
                        height: 15vw;
-                    //    background-color: $focusColor;
                     p {
                         margin: 1vw;
                     }
@@ -365,7 +407,18 @@ p {
                 }
             }
         }
-    }  
+    }
+    #contact-container {
+        .container {
+            .link-container {
+                padding-right: 5vw;
+                .link {
+                    width: 12vw;
+                    margin-top: 10vw;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 615px) {
@@ -374,19 +427,10 @@ p {
             margin-top: 100vw;
         }
     }
-    #contact-container {
-        // margin-top: 25vw;
-        .link {
-            margin-top: 5vw;
-        }
-    }  
     #portfolio-container{
         .carousel {
             .carousel-indicators {
                 bottom:20vw;
-            }
-            a.carousel-control-next, a.carousel-control-prev {
-                margin: 20vw -45px 0vw;
             }
             .carousel-inner {
                 .card {
@@ -401,6 +445,19 @@ p {
             }
         }
     }  
+    #contact-container {
+        .container {
+            height: 60vw;
+            .link-container {
+                padding-right: 9vw;
+                .link {
+                    width: 12vw;
+                    float: right;
+                    margin-top: 5vw;
+                }
+            }
+        }
+    }
   
 }
 
@@ -436,6 +493,20 @@ p {
             }
         }
     }  
+    #contact-container {
+        .container {
+            height: 65vw;
+            .link-container {
+                padding-right: 15vw;
+                .link {
+                    width: 12vw;
+                }
+            }
+        }
+    }
+    #contact-container::after {
+        opacity: 60%;
+    }
 }
 
 @media (max-width: 450px) {
@@ -471,14 +542,16 @@ p {
         }
     } 
     #contact-container {
-        h1 {
-            color: black;
-            // -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-            // -webkit-text-stroke-width: 1px;
-            // -webkit-text-stroke-color: black;
-            // background-color: $background;
-            
+        .container {
+            height: 69vw;
+            .link-container {
+                padding-right: 0vw;
+                .link {
+                    width: 15vw;
+                    margin-top: 0vw;
+                    float: right;
+                }
+            }
         }
     }
-
 }
