@@ -1,8 +1,13 @@
 body {
   background-color: #EFE7DC;
-  overflow-x: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow: hidden;
+}
+
+#wrapper {
+  height: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -145,7 +150,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 4em;
 }
 
-#about-container #posters {
+#about-container #postersCarousel {
   height: 30vw;
   overflow-y: auto;
   margin-bottom: 2vw;
@@ -160,12 +165,12 @@ h1, h2, h3, h4, h5, h6 {
           transform: scaleX(-1);
 }
 
-#about-container #posters .main-poster {
+#about-container #postersCarousel .main-poster {
   height: 30vw;
   margin-right: 1vw;
 }
 
-#about-container #posters .main-poster img {
+#about-container #postersCarousel .main-poster img {
   float: right;
 }
 
@@ -176,6 +181,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #about-container #about-me p {
+  background-color: #EFE7DC;
   padding-top: 2%;
 }
 
@@ -203,8 +209,8 @@ p a:hover {
 }
 
 .p-right .text-focus {
-  font-size: 1vw;
-  font-weight: 200;
+  font-size: 1.3em;
+  font-weight: 300;
 }
 
 .p-left {
@@ -219,8 +225,22 @@ p a:hover {
 }
 
 @media (max-width: 1500px) {
+  .p-right {
+    padding-left: 20%;
+    margin-right: 5vw;
+  }
+  #about-container #postersCarousel {
+    height: 35vw;
+    border-radius: 0vw 0vw 50vw 0vw;
+  }
+  #about-container #postersCarousel .main-poster {
+    height: 35vw;
+  }
   #contact-container {
     margin-top: 10vw;
+  }
+  .img-container {
+    overflow: hidden;
   }
   .img-container #coffee {
     margin-top: 10vw;
@@ -229,14 +249,32 @@ p a:hover {
 }
 
 @media (max-width: 1200px) {
+  .p-right {
+    padding-left: 10%;
+    margin-right: 2vw;
+  }
+  #about-container #postersCarousel {
+    height: 45vw;
+    border-radius: 0vw 0vw 27vw 0vw;
+  }
+  #about-container #postersCarousel .main-poster {
+    height: 45vw;
+  }
   .img-container #coffee {
     margin-top: 20vw;
   }
 }
 
 @media (max-width: 1000px) {
+  #about-container #postersCarousel {
+    height: 50vw;
+    border-radius: 0vw 0vw 27vw 0vw;
+  }
+  #about-container #postersCarousel .main-poster {
+    height: 50vw;
+  }
   .p-right {
-    padding-left: 20%;
+    padding-left: 0%;
   }
   #contact-container {
     margin-top: 10vw;
@@ -244,8 +282,14 @@ p a:hover {
 }
 
 @media (max-width: 991px) {
+  .p-right {
+    padding-left: 30%;
+  }
+  #about-container #postersCarousel {
+    display: none;
+  }
   .img-container #coffee {
-    top: 70vw;
+    top: 30vw;
   }
 }
 
@@ -278,20 +322,19 @@ p a:hover {
     padding-left: 0%;
   }
   .img-container #coffee {
-    top: 100vw;
+    top: 25vw;
   }
 }
 
 @media (max-width: 450px) {
+  .p-right {
+    margin-right: 0;
+  }
   .img-container #coffee {
-    top: 150vw;
+    top: 50vw;
   }
   #contact-container h1 {
     color: black;
-    -webkit-text-fill-color: white;
-    /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
   }
 }
 /*# sourceMappingURL=styles.css.map */
