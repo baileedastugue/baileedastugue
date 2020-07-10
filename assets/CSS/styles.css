@@ -479,8 +479,11 @@ p a:hover {
   #portfolio-container .carousel .carousel-inner .card img.port {
     height: 55vw;
   }
+  #contact-container {
+    margin-top: 5vw;
+  }
   #contact-container .container {
-    height: 69vw;
+    height: 70vw;
   }
   #contact-container .container .link-container {
     padding-right: 0vw;
