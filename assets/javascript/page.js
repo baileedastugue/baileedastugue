@@ -182,7 +182,7 @@ var elephantsMemory = {
      largeImg: 'assets/images/em.png',
      title: `Elephant's Memory - a MERN app`,
      about:
-          'A collaborative, private and digital memory album. This application allows users to create memory albums that others with link can also contribute to. Memory posts include uploading a picture with a caption or a text prompt and response. Users can protect their albums and the posts within those albums with an encrypted password. Additional functionality includes changing user passwords, deleting user account, deleting albums, changing album names, adding, updating, or removing album passwords, and deleting memory posts. Both user and album passwords are encrypted though BCrypt.',
+          'A collaborative, private and digital memory album. This application allows users to create memory albums that others with the link can also contribute to. Memory posts include uploading a picture with a caption or a text prompt and response. Users can protect their albums and the posts within those albums with an encrypted password. Additional functionality includes changing user passwords, deleting user account, deleting albums, changing album names, adding, updating, or removing album passwords, and deleting memory posts. Both user and album passwords are encrypted though BCrypt.',
      skills:
           'React, Redux, Express.js, Mongoose.js, Node.js, JSX, Reactstrap/Bootstrap, Cloudinary, JSON Web Tokens, SASS, CSS animations, React Spring, React Helmet, React UUID, Express Validator',
      concepts:
