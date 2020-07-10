@@ -51,9 +51,22 @@ h1, h2, h3, h4, h5, h6 {
 
 #portfolio-container .carousel {
   opacity: 100%;
-  height: 40vw;
-  width: 65vw;
-  margin-bottom: 3vw;
+  width: 100%;
+  position: relative;
+}
+
+#portfolio-container .carousel .carousel-indicators {
+  bottom: 10vw;
+}
+
+#portfolio-container .carousel a.carousel-control-next, #portfolio-container .carousel a.carousel-control-prev {
+  background-color: black;
+  bottom: 0vw;
+  margin: 20vw -25px 0vw;
+  padding: 0px;
+  height: 4vw;
+  width: 4vw;
+  border-radius: 4vw;
 }
 
 #portfolio-container .carousel .carousel-inner .card {
@@ -71,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 100%;
   height: 10vw;
   overflow: auto;
-  font-size: 1vw;
+  font-size: 1em;
 }
 
 #portfolio-container .carousel .carousel-inner .card-body p a:hover {
@@ -96,6 +109,9 @@ h1, h2, h3, h4, h5, h6 {
 #portfolio-container .carousel .carousel-inner img.port {
   height: 40vw;
   padding: 0px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: #EFE7DC;
 }
 
 #portfolio-container .carousel .carousel-inner img.port img:hover {
@@ -104,12 +120,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #EFE7DC;
+  background: transparent;
 }
 
 /* Handle */
@@ -263,6 +279,15 @@ p a:hover {
   .img-container #coffee {
     margin-top: 20vw;
   }
+  #portfolio-container .carousel .carousel-indicators {
+    bottom: 15vw;
+  }
+  #portfolio-container .carousel .carousel-inner .card {
+    height: 55vw;
+  }
+  #portfolio-container .carousel .carousel-inner .card .card-body {
+    height: 15vw;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -299,12 +324,30 @@ p a:hover {
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .img-container #coffee {
     margin-top: 60vw;
   }
   #contact-container {
     margin-top: 10vw;
+  }
+  #portfolio-container .carousel .carousel-indicators {
+    bottom: 15vw;
+  }
+  #portfolio-container .carousel a.carousel-control-next, #portfolio-container .carousel a.carousel-control-prev {
+    margin: 20vw -4vw 0vw;
+  }
+  #portfolio-container .carousel .carousel-inner .card {
+    height: 65vw;
+  }
+  #portfolio-container .carousel .carousel-inner .card .card-body {
+    height: 15vw;
+  }
+  #portfolio-container .carousel .carousel-inner .card .card-body p {
+    margin: 1vw;
+  }
+  #portfolio-container .carousel .carousel-inner .card img.port {
+    height: 50vw;
   }
 }
 
@@ -315,6 +358,21 @@ p a:hover {
   #contact-container .link {
     margin-top: 5vw;
   }
+  #portfolio-container .carousel .carousel-indicators {
+    bottom: 20vw;
+  }
+  #portfolio-container .carousel a.carousel-control-next, #portfolio-container .carousel a.carousel-control-prev {
+    margin: 20vw -45px 0vw;
+  }
+  #portfolio-container .carousel .carousel-inner .card {
+    height: 70vw;
+  }
+  #portfolio-container .carousel .carousel-inner .card .card-body {
+    height: 20vw;
+  }
+  #portfolio-container .carousel .carousel-inner .card img.port {
+    height: 50vw;
+  }
 }
 
 @media (max-width: 500px) {
@@ -324,6 +382,23 @@ p a:hover {
   .img-container #coffee {
     top: 25vw;
   }
+  #portfolio-container .carousel .carousel-indicators {
+    bottom: 23vw;
+  }
+  #portfolio-container .carousel a.carousel-control-next, #portfolio-container .carousel a.carousel-control-prev {
+    margin: 27vw 0vw;
+    height: 6vw;
+    width: 6vw;
+  }
+  #portfolio-container .carousel .carousel-inner .card {
+    height: 80vw;
+  }
+  #portfolio-container .carousel .carousel-inner .card .card-body {
+    height: 25vw;
+  }
+  #portfolio-container .carousel .carousel-inner .card img.port {
+    height: 55vw;
+  }
 }
 
 @media (max-width: 450px) {
@@ -332,6 +407,23 @@ p a:hover {
   }
   .img-container #coffee {
     top: 50vw;
+  }
+  #portfolio-container .carousel .carousel-indicators {
+    bottom: 33vw;
+  }
+  #portfolio-container .carousel a.carousel-control-next, #portfolio-container .carousel a.carousel-control-prev {
+    margin: 27vw 0vw;
+    height: 6vw;
+    width: 6vw;
+  }
+  #portfolio-container .carousel .carousel-inner .card {
+    height: 90vw;
+  }
+  #portfolio-container .carousel .carousel-inner .card .card-body {
+    height: 35vw;
+  }
+  #portfolio-container .carousel .carousel-inner .card img.port {
+    height: 55vw;
   }
   #contact-container h1 {
     color: black;

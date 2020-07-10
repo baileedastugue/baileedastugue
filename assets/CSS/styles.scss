@@ -52,25 +52,37 @@ h1, h2, h3, h4, h5, h6 {
     }
     .carousel {
         opacity: 100%;
-        height: 40vw;
-        width: 65vw;
-        margin-bottom: 3vw; 
+        width: 100%;
+        position: relative;
+        // height: 40vw;
+        .carousel-indicators {
+            bottom: 10vw;
+        }
+        a.carousel-control-next, a.carousel-control-prev {
+            // height: 10vw;
+            background-color: black;
+            bottom: 0vw;
+            margin: 20vw -25px 0vw;
+            padding: 0px;
+            height: 4vw;
+            width: 4vw;
+            border-radius: 4vw;
+        }
         .carousel-inner {
             .card {
                 height:50vw;
                 outline: none;
-            border: none;
+                border: none;
             }
             .card-text {
                 text-align: center;
-              
             }
             .card-body {
                 background-color: white;
                 opacity: 100%;
                 height: 10vw;
                 overflow: auto;
-                font-size: 1vw;
+                font-size: 1em;
                 p a:hover{
                     color: black;
                 }
@@ -90,6 +102,8 @@ h1, h2, h3, h4, h5, h6 {
             img.port {
                 height: 40vw;
                 padding: 0px;
+                object-fit: contain;
+                background-color: $background;
                 img:hover{
                     opacity: 80%;
                 }
@@ -100,12 +114,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
   }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background:$background;
+    background: transparent;
   }
 
   /* Handle */
@@ -258,6 +272,21 @@ p {
             margin-top: 20vw;
         }
     }
+    #portfolio-container{
+        .carousel {
+            .carousel-indicators {
+                bottom: 15vw;
+            }
+            .carousel-inner {
+                .card {
+                    height: 55vw;
+                   .card-body {
+                       height: 15vw;
+                   }
+                }
+            }
+        }
+    }       
 }
 
 @media (max-width: 1000px) {
@@ -302,7 +331,7 @@ p {
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
     .img-container {
         #coffee {
             margin-top: 60vw;
@@ -310,6 +339,32 @@ p {
     }
     #contact-container {
         margin-top: 10vw;
+    }
+    #portfolio-container{
+        .carousel {
+            .carousel-indicators {
+                bottom: 15vw;
+            }
+            a.carousel-control-next, a.carousel-control-prev {
+                margin: 20vw -4vw 0vw;
+            }
+            .carousel-inner {
+                .card {
+                    height: 65vw;
+                   .card-body {
+                       height: 15vw;
+                    //    background-color: $focusColor;
+                    p {
+                        margin: 1vw;
+                    }
+                   }
+                   img.port {
+                       height: 50vw;
+
+                   }
+                }
+            }
+        }
     }  
 }
 
@@ -325,6 +380,28 @@ p {
             margin-top: 5vw;
         }
     }  
+    #portfolio-container{
+        .carousel {
+            .carousel-indicators {
+                bottom:20vw;
+            }
+            a.carousel-control-next, a.carousel-control-prev {
+                margin: 20vw -45px 0vw;
+            }
+            .carousel-inner {
+                .card {
+                    height: 70vw;
+                   .card-body {
+                       height: 20vw;
+                   }
+                   img.port {
+                    height: 50vw;
+                }
+                }
+            }
+        }
+    }  
+  
 }
 
 @media (max-width: 500px) {
@@ -336,6 +413,29 @@ p {
             top: 25vw;
         }
     }
+    #portfolio-container{
+        .carousel {
+            .carousel-indicators {
+                bottom:23vw;
+            }
+            a.carousel-control-next, a.carousel-control-prev {
+                margin: 27vw 0vw;
+                height: 6vw;
+                width: 6vw;
+            }
+            .carousel-inner {
+                .card {
+                    height: 80vw;
+                   .card-body {
+                       height: 25vw;
+                   }
+                   img.port {
+                    height: 55vw;
+                }
+                }
+            }
+        }
+    }  
 }
 
 @media (max-width: 450px) {
@@ -347,6 +447,29 @@ p {
             top: 50vw;
         }
     }
+    #portfolio-container{
+        .carousel {
+            .carousel-indicators {
+                bottom:33vw;
+            }
+            a.carousel-control-next, a.carousel-control-prev {
+                margin: 27vw 0vw;
+                height: 6vw;
+                width: 6vw;
+            }
+            .carousel-inner {
+                .card {
+                    height: 90vw;
+                   .card-body {
+                       height: 35vw;
+                   }
+                   img.port {
+                    height: 55vw;
+                }
+                }
+            }
+        }
+    } 
     #contact-container {
         h1 {
             color: black;
