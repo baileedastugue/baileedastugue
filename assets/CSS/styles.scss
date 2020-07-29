@@ -169,17 +169,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #about-container {
+    position: relative;
     h1 {
         text-align: left;
         font-family: 'Playfair Display', serif;
         color: black;
         font-size: 4em;
     }
+
+    div#squiggle1{
+        background-image: url('../images/squiggle.png');
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 75vw;
+        z-index: -1;
+        position: absolute;
+        top: -17vw;
+        left: -10vw;
+    }
     #postersCarousel {
         height: 30vw;
         overflow-y: auto;
         margin-bottom: 2vw;
         display: flex;
+        z-index: -2;
         justify-content: space-between;
         border-radius: 0vw 0vw 50vw 0vw;
         transform: scaleX(-1);
@@ -194,7 +207,7 @@ h1, h2, h3, h4, h5, h6 {
     #about-me {
         img {
             width: 40vw;
-            position: absolute;
+            // position: absolute;
             right: -10vw;    
         }
         p {
@@ -204,9 +217,14 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-.navbar-brand img {
-    padding-left: 3vw;
-    width: 100%;
+nav.navbar {
+    a.navbar-brand {
+        padding-left: 6vw;
+        img {
+            width: 100%;
+            z-index: 100;
+        }
+    }
 }
 
 p {
