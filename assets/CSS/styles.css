@@ -3,6 +3,9 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
+  font-size: 1em;
+  font-size: 1.3em;
+  font-weight: 300;
 }
 
 #wrapper {
@@ -42,6 +45,11 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.1em;
 }
 
+#portfolio-container {
+  height: 100vh;
+  margin: 1vh 1vw;
+}
+
 #portfolio-container h1 {
   text-align: left;
   font-family: 'Playfair Display', serif;
@@ -50,72 +58,60 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #portfolio-container .carousel {
-  opacity: 100%;
-  width: 100%;
   position: relative;
-}
-
-#portfolio-container .carousel .carousel-indicators {
-  bottom: 10vw;
 }
 
 #portfolio-container .carousel a.carousel-control-next, #portfolio-container .carousel a.carousel-control-prev {
   background-color: black;
-  bottom: 0vw;
-  margin: 20vw -25px 0vw;
+  top: 100%;
+  position: absolute;
   padding: 0px;
   height: 4vw;
   width: 4vw;
   border-radius: 4vw;
 }
 
-#portfolio-container .carousel .carousel-inner .card {
-  height: 50vw;
+#portfolio-container .carousel .carousel-inner .port-info-container .port-card {
   outline: none;
   border: none;
 }
 
-#portfolio-container .carousel .carousel-inner .card-text {
-  text-align: center;
-}
-
-#portfolio-container .carousel .carousel-inner .card-body {
-  background-color: white;
-  opacity: 100%;
-  height: 10vw;
-  overflow: auto;
+#portfolio-container .carousel .carousel-inner .port-info-container .port-body {
+  overflow-y: auto;
+  overflow-x: hidden;
   font-size: 1em;
 }
 
-#portfolio-container .carousel .carousel-inner .card-body p a:hover {
+#portfolio-container .carousel .carousel-inner .port-info-container .port-body p a:hover {
   color: black;
 }
 
-#portfolio-container .carousel .carousel-inner .card-body .port-info {
-  text-align: justify;
-  margin: 1vw 6vw;
+#portfolio-container .carousel .carousel-inner .port-info-container .port-body .port-text {
+  text-align: center;
+  font-size: 1.3em;
 }
 
-#portfolio-container .carousel .carousel-inner .card-body .tech {
+#portfolio-container .carousel .carousel-inner .port-info-container .port-body .port-info {
+  text-align: justify;
+  margin: 1vw;
+}
+
+#portfolio-container .carousel .carousel-inner .port-info-container .port-body .tech {
   text-align: left;
   margin: 1vw 6vw;
 }
 
-#portfolio-container .carousel .carousel-inner .card-body .tech em {
+#portfolio-container .carousel .carousel-inner .port-info-container .port-body .tech em {
   color: #ec583f;
   font-style: bold;
 }
 
-#portfolio-container .carousel .carousel-inner img.port {
-  height: 40vw;
-  padding: 0px;
+#portfolio-container .carousel .carousel-inner .port-img-container img.port-img {
+  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  background-color: #EFE7DC;
-}
-
-#portfolio-container .carousel .carousel-inner img.port img:hover {
-  opacity: 80%;
+  -o-object-position: center;
+     object-position: center;
 }
 
 /* width */
@@ -187,17 +183,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
   color: black;
   font-size: 4em;
-}
-
-#about-container div#squiggle1 {
-  background-image: url("../images/squiggle.png");
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 75vw;
-  z-index: -1;
-  position: absolute;
-  top: -17vw;
-  left: -10vw;
 }
 
 #about-container #postersCarousel {
@@ -276,241 +261,5 @@ p a:hover {
   content: "";
   clear: both;
   display: table;
-}
-
-@media (max-width: 1500px) {
-  .p-right {
-    padding-left: 20%;
-    margin-right: 5vw;
-  }
-  #about-container #postersCarousel {
-    height: 35vw;
-    border-radius: 0vw 0vw 50vw 0vw;
-  }
-  #about-container #postersCarousel .main-poster {
-    height: 35vw;
-  }
-  .img-container {
-    overflow: hidden;
-  }
-  .img-container #coffee {
-    margin-top: 10vw;
-    top: 29vw;
-  }
-}
-
-@media (max-width: 1200px) {
-  .p-right {
-    padding-left: 10%;
-    margin-right: 2vw;
-  }
-  #about-container #postersCarousel {
-    height: 45vw;
-    border-radius: 0vw 0vw 27vw 0vw;
-  }
-  #about-container #postersCarousel .main-poster {
-    height: 45vw;
-  }
-  .img-container #coffee {
-    margin-top: 20vw;
-  }
-  #portfolio-container .carousel .carousel-indicators {
-    bottom: 15vw;
-  }
-  #portfolio-container .carousel .carousel-inner .card {
-    height: 55vw;
-  }
-  #portfolio-container .carousel .carousel-inner .card .card-body {
-    height: 15vw;
-  }
-  #contact-container .container .link-container {
-    padding-right: 14vw;
-  }
-}
-
-@media (max-width: 1000px) {
-  #about-container #postersCarousel {
-    height: 50vw;
-    border-radius: 0vw 0vw 27vw 0vw;
-  }
-  #about-container #postersCarousel .main-poster {
-    height: 50vw;
-  }
-  .p-right {
-    padding-left: 0%;
-  }
-  #contact-container {
-    height: 56vw;
-  }
-  #contact-container .container .link-container {
-    padding-right: 20vw;
-  }
-}
-
-@media (max-width: 991px) {
-  .p-right {
-    padding-left: 30%;
-  }
-  #about-container #postersCarousel {
-    display: none;
-  }
-  .img-container #coffee {
-    top: 30vw;
-  }
-  #contact-container .container .link-container {
-    padding-right: 8vw;
-  }
-  #contact-container .container .link-container .link {
-    width: 12vw;
-  }
-}
-
-@media (max-width: 880px) {
-  .img-container #coffee {
-    margin-top: 39vw;
-  }
-  #contact-container .container .link-container {
-    padding-right: 13vw;
-  }
-  #contact-container .container .link-container .link {
-    opacity: 100%;
-    width: 12vw;
-    margin-top: 10vw;
-  }
-}
-
-@media (max-width: 768px) {
-  .img-container #coffee {
-    margin-top: 60vw;
-  }
-  #portfolio-container .carousel .carousel-indicators {
-    bottom: 15vw;
-  }
-  #portfolio-container .carousel .carousel-inner .card {
-    height: 65vw;
-  }
-  #portfolio-container .carousel .carousel-inner .card .card-body {
-    height: 15vw;
-  }
-  #portfolio-container .carousel .carousel-inner .card .card-body p {
-    margin: 1vw;
-  }
-  #portfolio-container .carousel .carousel-inner .card img.port {
-    height: 50vw;
-  }
-  #contact-container .container .link-container {
-    padding-right: 5vw;
-  }
-  #contact-container .container .link-container .link {
-    width: 12vw;
-    margin-top: 10vw;
-  }
-}
-
-@media (max-width: 615px) {
-  .img-container #coffee {
-    margin-top: 100vw;
-  }
-  #portfolio-container .carousel .carousel-indicators {
-    bottom: 20vw;
-  }
-  #portfolio-container .carousel .carousel-inner .card {
-    height: 70vw;
-  }
-  #portfolio-container .carousel .carousel-inner .card .card-body {
-    height: 20vw;
-  }
-  #portfolio-container .carousel .carousel-inner .card img.port {
-    height: 50vw;
-  }
-  #contact-container .container {
-    height: 60vw;
-  }
-  #contact-container .container .link-container {
-    padding-right: 9vw;
-  }
-  #contact-container .container .link-container .link {
-    width: 12vw;
-    float: right;
-    margin-top: 5vw;
-  }
-}
-
-@media (max-width: 500px) {
-  .p-right {
-    padding-left: 0%;
-  }
-  .img-container #coffee {
-    top: 25vw;
-  }
-  #portfolio-container .carousel .carousel-indicators {
-    bottom: 23vw;
-  }
-  #portfolio-container .carousel a.carousel-control-next, #portfolio-container .carousel a.carousel-control-prev {
-    margin: 27vw 0vw;
-    height: 6vw;
-    width: 6vw;
-  }
-  #portfolio-container .carousel .carousel-inner .card {
-    height: 80vw;
-  }
-  #portfolio-container .carousel .carousel-inner .card .card-body {
-    height: 25vw;
-  }
-  #portfolio-container .carousel .carousel-inner .card img.port {
-    height: 55vw;
-  }
-  #contact-container .container {
-    height: 65vw;
-  }
-  #contact-container .container .link-container {
-    padding-right: 15vw;
-  }
-  #contact-container .container .link-container .link {
-    width: 12vw;
-  }
-  #contact-container::after {
-    opacity: 60%;
-  }
-}
-
-@media (max-width: 450px) {
-  .p-right {
-    margin-right: 0;
-  }
-  .img-container #coffee {
-    top: 50vw;
-  }
-  #portfolio-container .carousel .carousel-indicators {
-    bottom: 33vw;
-  }
-  #portfolio-container .carousel a.carousel-control-next, #portfolio-container .carousel a.carousel-control-prev {
-    margin: 27vw 0vw;
-    height: 6vw;
-    width: 6vw;
-  }
-  #portfolio-container .carousel .carousel-inner .card {
-    height: 90vw;
-  }
-  #portfolio-container .carousel .carousel-inner .card .card-body {
-    height: 35vw;
-  }
-  #portfolio-container .carousel .carousel-inner .card img.port {
-    height: 55vw;
-  }
-  #contact-container {
-    margin-top: 5vw;
-  }
-  #contact-container .container {
-    height: 70vw;
-  }
-  #contact-container .container .link-container {
-    padding-right: 0vw;
-  }
-  #contact-container .container .link-container .link {
-    width: 15vw;
-    margin-top: 0vw;
-    float: right;
-  }
 }
 /*# sourceMappingURL=styles.css.map */

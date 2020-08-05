@@ -210,41 +210,46 @@ var optionsArray = [
 
 var currentPick;
 
-function addCards() {
+function addPorts() {
      for (var i = 0; i < optionsArray.length; i++) {
           var newDiv = $('<div>');
           if (i === 0) {
-               newDiv.attr('class', 'carousel-item active card');
+               newDiv.attr('class', 'carousel-item active port-card');
           } else {
-               newDiv.attr('class', 'carousel-item card');
+               newDiv.attr('class', 'carousel-item port-card');
           }
+          let newRow = $(`<div class='row'>`);
+          let imgContainer = $('<div class="port-img-container col-lg-7">');
+          let infoContainer = $(`<div class='port-info-container col-lg-5'>`);
           var image = $('<img>');
-          image.attr('src', optionsArray[i].largeImg).attr(
-               'class',
-               'port card-img-top'
-          );
-          newDiv.append(image);
-          var cardBody = $('<div>').attr('class', 'card-body');
-          var cardTitle = $('<h5>')
-               .attr('class', 'card-title')
+          image.attr('src', optionsArray[i].largeImg).attr('class', 'port-img');
+          imgContainer.append(image);
+          newRow.append(imgContainer);
+
+          var portBody = $('<div>').attr('class', 'port-body');
+          var portTitle = $('<h2>')
+               .attr('class', 'port-title')
                .html(optionsArray[i].title);
-          cardBody.append(cardTitle);
-          var cardInfo = $('<p>').attr('class', 'card-text');
+          portBody.append(portTitle);
+
+          var portInfo = $('<p>').attr('class', 'port-text');
           var link1 = `<a href='${optionsArray[i].deployed}' target="_blank">Deployed</>`;
           var link2 = `<a href='${optionsArray[i].gitHub}' target="_blank">GitHub Repo</a>`;
-          cardInfo.append(link1 + ` | ` + link2);
+          portInfo.append(link1 + ' | ' + link2);
           var about = $("<p class='port-info'>").html(optionsArray[i].about);
-          cardInfo.append(about);
+          portInfo.append(about);
           var techSkills = $('<p class="tech">').html(
                '<em>Skills utilized: <br></em>' + optionsArray[i].skills
           );
           var techConcepts = $('<p class="tech">').html(
                '<em>Programming concepts: <br></em>' + optionsArray[i].concepts
           );
-          cardInfo.append(techSkills);
-          cardInfo.append(techConcepts);
-          cardBody.append(cardInfo);
-          newDiv.append(cardBody);
+          portInfo.append(techSkills);
+          portInfo.append(techConcepts);
+          portBody.append(portInfo);
+          infoContainer.append(portBody);
+          newRow.append(infoContainer);
+          newDiv.append(newRow);
           $('#portfolio-container .carousel-inner').append(newDiv);
      }
 }
@@ -265,5 +270,5 @@ function addIndicators() {
      }
 }
 
-addCards();
+addPorts();
 addIndicators();

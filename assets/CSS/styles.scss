@@ -5,6 +5,9 @@ body {
     background-color: $background;
     box-sizing: border-box;
     overflow: hidden;
+    font-size: 1em;
+    font-size: 1.3em;
+    font-weight: 300;
 }
 
 #wrapper {
@@ -44,6 +47,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #portfolio-container{
+    height: 100vh;
+    margin: 1vh 1vw;
     h1 {
         text-align: left;
         font-family: 'Playfair Display', serif;
@@ -51,61 +56,58 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 4em;
     }
     .carousel {
-        opacity: 100%;
-        width: 100%;
         position: relative;
-        // height: 40vw;
-        .carousel-indicators {
-            bottom: 10vw;
-        }
+        // .carousel-indicators {
+        //     bottom: 0vw;
+        //     position: absolute;
+        // }
         a.carousel-control-next, a.carousel-control-prev {
-            // height: 10vw;
             background-color: black;
-            bottom: 0vw;
-            margin: 20vw -25px 0vw;
+            top: 100%;
+            position: absolute;
+            
             padding: 0px;
             height: 4vw;
             width: 4vw;
             border-radius: 4vw;
         }
         .carousel-inner {
-            .card {
-                height:50vw;
-                outline: none;
-                border: none;
-            }
-            .card-text {
-                text-align: center;
-            }
-            .card-body {
-                background-color: white;
-                opacity: 100%;
-                height: 10vw;
-                overflow: auto;
-                font-size: 1em;
-                p a:hover{
-                    color: black;
+            .port-info-container {
+                .port-card {
+                    outline: none;
+                    border: none;
                 }
-                .port-info {
-                    text-align: justify;
-                    margin: 1vw 6vw;
-                }
-                .tech {
-                    text-align: left;
-                    margin: 1vw 6vw;
-                    em { 
-                        color: $focusColor;
-                        font-style: bold;
+                .port-body {
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                    font-size: 1em;
+                    p a:hover{
+                        color: black;
+                    }
+                    .port-text {
+                        text-align: center;
+                        font-size: 1.3em;
+                    }
+                    .port-info {
+                        text-align: justify;
+                        margin: 1vw;
+                    }
+                    .tech {
+                        text-align: left;
+                        margin: 1vw 6vw;
+                        em { 
+                            color: $focusColor;
+                            font-style: bold;
+                        }
                     }
                 }
             }
-            img.port {
-                height: 40vw;
-                padding: 0px;
-                object-fit: contain;
-                background-color: $background;
-                img:hover{
-                    opacity: 80%;
+            .port-img-container {
+                img.port-img {
+                    // max-height: 100vh;
+                    width: 100%;
+                    object-fit: contain;
+                    object-position: center;
                 }
             }
         }
@@ -177,16 +179,16 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 4em;
     }
 
-    div#squiggle1{
-        background-image: url('../images/squiggle.png');
-        background-repeat: no-repeat;
-        height: 100%;
-        width: 75vw;
-        z-index: -1;
-        position: absolute;
-        top: -17vw;
-        left: -10vw;
-    }
+    // div#squiggle1{
+    //     background-image: url('../images/squiggle.png');
+    //     background-repeat: no-repeat;
+    //     height: 100%;
+    //     width: 75vw;
+    //     z-index: -1;
+    //     position: absolute;
+    //     top: -17vw;
+    //     left: -10vw;
+    // }
     #postersCarousel {
         height: 30vw;
         overflow-y: auto;
@@ -260,317 +262,317 @@ p {
     display: table;
   }
 
-@media (max-width: 1500px) { 
-    .p-right {
-        padding-left: 20%;
-        margin-right: 5vw;
-    }
-    #about-container {
-        #postersCarousel {
-            height: 35vw;
-            // margin-top: 5vw;
-            border-radius: 0vw 0vw 50vw 0vw;
-            .main-poster {
-                height: 35vw;
-            }
-        }
-    }
-    .img-container {
-        overflow: hidden;
-        #coffee {
-            margin-top: 10vw;
-            top: 29vw;
-        }
-    }
-}
+// @media (max-width: 1500px) { 
+//     .p-right {
+//         padding-left: 20%;
+//         margin-right: 5vw;
+//     }
+//     #about-container {
+//         #postersCarousel {
+//             height: 35vw;
+//             // margin-top: 5vw;
+//             border-radius: 0vw 0vw 50vw 0vw;
+//             .main-poster {
+//                 height: 35vw;
+//             }
+//         }
+//     }
+//     .img-container {
+//         overflow: hidden;
+//         #coffee {
+//             margin-top: 10vw;
+//             top: 29vw;
+//         }
+//     }
+// }
 
-@media (max-width: 1200px) {
-    .p-right {
-        padding-left: 10%;
-        margin-right: 2vw;
-    }
-    #about-container {
-        #postersCarousel {
-            height: 45vw;
-            // margin-top: 5vw;
-            border-radius: 0vw 0vw 27vw 0vw;
-            .main-poster {
-                height: 45vw;
-            }
-        }
-    }
-    .img-container {
-        #coffee {
-            margin-top: 20vw;
-        }
-    }
-    #portfolio-container{
-        .carousel {
-            .carousel-indicators {
-                bottom: 15vw;
-            }
-            .carousel-inner {
-                .card {
-                    height: 55vw;
-                   .card-body {
-                       height: 15vw;
-                   }
-                }
-            }
-        }
-    }
-    #contact-container {
-        .container {
-            .link-container {
-                padding-right: 14vw;
-            }
-        }
-    }       
-}
+// @media (max-width: 1200px) {
+//     .p-right {
+//         padding-left: 10%;
+//         margin-right: 2vw;
+//     }
+//     #about-container {
+//         #postersCarousel {
+//             height: 45vw;
+//             // margin-top: 5vw;
+//             border-radius: 0vw 0vw 27vw 0vw;
+//             .main-poster {
+//                 height: 45vw;
+//             }
+//         }
+//     }
+//     .img-container {
+//         #coffee {
+//             margin-top: 20vw;
+//         }
+//     }
+//     #portfolio-container{
+//         .carousel {
+//             .carousel-indicators {
+//                 bottom: 15vw;
+//             }
+//             .carousel-inner {
+//                 .card {
+//                     height: 55vw;
+//                    .card-body {
+//                        height: 15vw;
+//                    }
+//                 }
+//             }
+//         }
+//     }
+//     #contact-container {
+//         .container {
+//             .link-container {
+//                 padding-right: 14vw;
+//             }
+//         }
+//     }       
+// }
 
-@media (max-width: 1000px) {
-    #about-container {
-        #postersCarousel {
-            height: 50vw;
-            border-radius: 0vw 0vw 27vw 0vw;
-            .main-poster {
-                height: 50vw;
-            }
-        }
-    }
-    .p-right {
-        padding-left: 0%;
-    }
-    #contact-container {
-        height: 56vw;
-        .container {
-            .link-container {
-                padding-right: 20vw;
-            }
-        }
-    }
+// @media (max-width: 1000px) {
+//     #about-container {
+//         #postersCarousel {
+//             height: 50vw;
+//             border-radius: 0vw 0vw 27vw 0vw;
+//             .main-poster {
+//                 height: 50vw;
+//             }
+//         }
+//     }
+//     .p-right {
+//         padding-left: 0%;
+//     }
+//     #contact-container {
+//         height: 56vw;
+//         .container {
+//             .link-container {
+//                 padding-right: 20vw;
+//             }
+//         }
+//     }
   
-}
+// }
 
-@media (max-width: 991px) {
-    .p-right {
-        padding-left: 30%;
-    }
-    #about-container {
-        #postersCarousel {
-            display: none;
-        }
-    }
-    .img-container {
-        #coffee {
-            top: 30vw;
-        }
-    }
-    #contact-container {
-        .container {
-            .link-container {
-                padding-right: 8vw;
-                .link {
-                    width: 12vw;
-                }
-            }
-        }
-    }
-}
+// @media (max-width: 991px) {
+//     .p-right {
+//         padding-left: 30%;
+//     }
+//     #about-container {
+//         #postersCarousel {
+//             display: none;
+//         }
+//     }
+//     .img-container {
+//         #coffee {
+//             top: 30vw;
+//         }
+//     }
+//     #contact-container {
+//         .container {
+//             .link-container {
+//                 padding-right: 8vw;
+//                 .link {
+//                     width: 12vw;
+//                 }
+//             }
+//         }
+//     }
+// }
 
-@media (max-width: 880px) {
-    .img-container {
-        #coffee {
-            margin-top: 39vw;
-        }
-    }
-    #contact-container {
-        .container {
-            .link-container {
-                padding-right: 13vw;
-                .link {
-                    opacity: 100%;
-                    width: 12vw;
-                    margin-top: 10vw;
-                }
-            }
-        }
-    }
-}
+// @media (max-width: 880px) {
+//     .img-container {
+//         #coffee {
+//             margin-top: 39vw;
+//         }
+//     }
+//     #contact-container {
+//         .container {
+//             .link-container {
+//                 padding-right: 13vw;
+//                 .link {
+//                     opacity: 100%;
+//                     width: 12vw;
+//                     margin-top: 10vw;
+//                 }
+//             }
+//         }
+//     }
+// }
 
-@media (max-width: 768px) {
-    .img-container {
-        #coffee {
-            margin-top: 60vw;
-        }
-    }
-    #portfolio-container{
-        .carousel {
-            .carousel-indicators {
-                bottom: 15vw;
-            }
-            .carousel-inner {
-                .card {
-                    height: 65vw;
-                   .card-body {
-                       height: 15vw;
-                    p {
-                        margin: 1vw;
-                    }
-                   }
-                   img.port {
-                       height: 50vw;
+// @media (max-width: 768px) {
+//     .img-container {
+//         #coffee {
+//             margin-top: 60vw;
+//         }
+//     }
+//     #portfolio-container{
+//         .carousel {
+//             .carousel-indicators {
+//                 bottom: 15vw;
+//             }
+//             .carousel-inner {
+//                 .card {
+//                     height: 65vw;
+//                    .card-body {
+//                        height: 15vw;
+//                     p {
+//                         margin: 1vw;
+//                     }
+//                    }
+//                    img.port {
+//                        height: 50vw;
 
-                   }
-                }
-            }
-        }
-    }
-    #contact-container {
-        .container {
-            .link-container {
-                padding-right: 5vw;
-                .link {
-                    width: 12vw;
-                    margin-top: 10vw;
-                }
-            }
-        }
-    }
-}
+//                    }
+//                 }
+//             }
+//         }
+//     }
+//     #contact-container {
+//         .container {
+//             .link-container {
+//                 padding-right: 5vw;
+//                 .link {
+//                     width: 12vw;
+//                     margin-top: 10vw;
+//                 }
+//             }
+//         }
+//     }
+// }
 
-@media (max-width: 615px) {
-    .img-container {
-        #coffee {
-            margin-top: 100vw;
-        }
-    }
-    #portfolio-container{
-        .carousel {
-            .carousel-indicators {
-                bottom:20vw;
-            }
-            .carousel-inner {
-                .card {
-                    height: 70vw;
-                   .card-body {
-                       height: 20vw;
-                   }
-                   img.port {
-                    height: 50vw;
-                }
-                }
-            }
-        }
-    }  
-    #contact-container {
-        .container {
-            height: 60vw;
-            .link-container {
-                padding-right: 9vw;
-                .link {
-                    width: 12vw;
-                    float: right;
-                    margin-top: 5vw;
-                }
-            }
-        }
-    }
+// @media (max-width: 615px) {
+//     .img-container {
+//         #coffee {
+//             margin-top: 100vw;
+//         }
+//     }
+//     #portfolio-container{
+//         .carousel {
+//             .carousel-indicators {
+//                 bottom:20vw;
+//             }
+//             .carousel-inner {
+//                 .card {
+//                     height: 70vw;
+//                    .card-body {
+//                        height: 20vw;
+//                    }
+//                    img.port {
+//                     height: 50vw;
+//                 }
+//                 }
+//             }
+//         }
+//     }  
+//     #contact-container {
+//         .container {
+//             height: 60vw;
+//             .link-container {
+//                 padding-right: 9vw;
+//                 .link {
+//                     width: 12vw;
+//                     float: right;
+//                     margin-top: 5vw;
+//                 }
+//             }
+//         }
+//     }
   
-}
+// }
 
-@media (max-width: 500px) {
-    .p-right {
-        padding-left: 0%;
-    }
-    .img-container {
-        #coffee {
-            top: 25vw;
-        }
-    }
-    #portfolio-container{
-        .carousel {
-            .carousel-indicators {
-                bottom:23vw;
-            }
-            a.carousel-control-next, a.carousel-control-prev {
-                margin: 27vw 0vw;
-                height: 6vw;
-                width: 6vw;
-            }
-            .carousel-inner {
-                .card {
-                    height: 80vw;
-                   .card-body {
-                       height: 25vw;
-                   }
-                   img.port {
-                    height: 55vw;
-                }
-                }
-            }
-        }
-    }  
-    #contact-container {
-        .container {
-            height: 65vw;
-            .link-container {
-                padding-right: 15vw;
-                .link {
-                    width: 12vw;
-                }
-            }
-        }
-    }
-    #contact-container::after {
-        opacity: 60%;
-    }
-}
+// @media (max-width: 500px) {
+//     .p-right {
+//         padding-left: 0%;
+//     }
+//     .img-container {
+//         #coffee {
+//             top: 25vw;
+//         }
+//     }
+//     #portfolio-container{
+//         .carousel {
+//             .carousel-indicators {
+//                 bottom:23vw;
+//             }
+//             a.carousel-control-next, a.carousel-control-prev {
+//                 margin: 27vw 0vw;
+//                 height: 6vw;
+//                 width: 6vw;
+//             }
+//             .carousel-inner {
+//                 .card {
+//                     height: 80vw;
+//                    .card-body {
+//                        height: 25vw;
+//                    }
+//                    img.port {
+//                     height: 55vw;
+//                 }
+//                 }
+//             }
+//         }
+//     }  
+//     #contact-container {
+//         .container {
+//             height: 65vw;
+//             .link-container {
+//                 padding-right: 15vw;
+//                 .link {
+//                     width: 12vw;
+//                 }
+//             }
+//         }
+//     }
+//     #contact-container::after {
+//         opacity: 60%;
+//     }
+// }
 
-@media (max-width: 450px) {
-    .p-right {
-        margin-right: 0;
-    }
-    .img-container {
-        #coffee {
-            top: 50vw;
-        }
-    }
-    #portfolio-container{
-        .carousel {
-            .carousel-indicators {
-                bottom:33vw;
-            }
-            a.carousel-control-next, a.carousel-control-prev {
-                margin: 27vw 0vw;
-                height: 6vw;
-                width: 6vw;
-            }
-            .carousel-inner {
-                .card {
-                    height: 90vw;
-                   .card-body {
-                       height: 35vw;
-                   }
-                   img.port {
-                    height: 55vw;
-                }
-                }
-            }
-        }
-    } 
-    #contact-container {
-        margin-top: 5vw;
-        .container {
-            height: 70vw;
-            .link-container {
-                padding-right: 0vw;
-                .link {
-                    width: 15vw;
-                    margin-top: 0vw;
-                    float: right;
-                }
-            }
-        }
-    }
-}
+// @media (max-width: 450px) {
+//     .p-right {
+//         margin-right: 0;
+//     }
+//     .img-container {
+//         #coffee {
+//             top: 50vw;
+//         }
+//     }
+//     #portfolio-container{
+//         .carousel {
+//             .carousel-indicators {
+//                 bottom:33vw;
+//             }
+//             a.carousel-control-next, a.carousel-control-prev {
+//                 margin: 27vw 0vw;
+//                 height: 6vw;
+//                 width: 6vw;
+//             }
+//             .carousel-inner {
+//                 .card {
+//                     height: 90vw;
+//                    .card-body {
+//                        height: 35vw;
+//                    }
+//                    img.port {
+//                     height: 55vw;
+//                 }
+//                 }
+//             }
+//         }
+//     } 
+//     #contact-container {
+//         margin-top: 5vw;
+//         .container {
+//             height: 70vw;
+//             .link-container {
+//                 padding-right: 0vw;
+//                 .link {
+//                     width: 15vw;
+//                     margin-top: 0vw;
+//                     float: right;
+//                 }
+//             }
+//         }
+//     }
+// }
