@@ -76,51 +76,45 @@ h1, h2, h3, h4, h5, h6 {
         }
         .carousel-inner {
             .port-info-container {
-                position: relative;
                 .port-card {
                     outline: none;
                     border: none;
                 }
+                position: relative;
                 .port-body {
-                    overflow-y: auto;
-                    overflow-x: hidden;
                     font-size: 2rem;
                     p a:hover{
                         color: black;
                     }
                     .port-text {
-                        text-align: center;
-                        font-size: 1.6rem;
                         position: absolute;
                         top: 50%; 
                         left: 50%;
+                        z-index: 100;
                         transform: translate(-50%, -50%);
-                        width: 80%;
-                    }
-                    .port-title {
-                        width: 80%;
-                        position: absolute;
-                        top: 19%; 
-                        left: 53%;
-                        transform: translate(-50%, -50%);
-                    }
-                    .port-info {
-                        text-align: justify;
-                        margin: 1vw;
-                    }
-                    .tech {
-                        text-align: left;
-                        margin: 1vw 2vw;
-                        em { 
-                            color: $focusColor;
-                            font-style: bold;
+                        width: 90%;
+                        .port-title {
+                            width: 100%;
+                            // color: black;
+                        }
+                        .port-info {
+                            text-align: justify;
+                            margin: 1vw;
+                        }
+                        .tech {
+                            text-align: left;
+                            margin: 1vw 2vw;
+                            em { 
+                                color: $focusColor;
+                                font-style: bold;
+                            }
                         }
                     }
                 }
             }
             .port-img-container {
                 img.port-img {
-                    height: 90vh;
+                    height: 95vh;
                     // width: 100%;
                     object-fit: contain;
                     object-position: center;

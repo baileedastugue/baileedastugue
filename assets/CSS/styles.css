@@ -84,8 +84,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #portfolio-container .carousel .carousel-inner .port-info-container .port-body {
-  overflow-y: auto;
-  overflow-x: hidden;
   font-size: 2rem;
 }
 
@@ -94,42 +92,36 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #portfolio-container .carousel .carousel-inner .port-info-container .port-body .port-text {
-  text-align: center;
-  font-size: 1.6rem;
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 100;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 80%;
+  width: 90%;
 }
 
-#portfolio-container .carousel .carousel-inner .port-info-container .port-body .port-title {
-  width: 80%;
-  position: absolute;
-  top: 19%;
-  left: 53%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+#portfolio-container .carousel .carousel-inner .port-info-container .port-body .port-text .port-title {
+  width: 100%;
 }
 
-#portfolio-container .carousel .carousel-inner .port-info-container .port-body .port-info {
+#portfolio-container .carousel .carousel-inner .port-info-container .port-body .port-text .port-info {
   text-align: justify;
   margin: 1vw;
 }
 
-#portfolio-container .carousel .carousel-inner .port-info-container .port-body .tech {
+#portfolio-container .carousel .carousel-inner .port-info-container .port-body .port-text .tech {
   text-align: left;
   margin: 1vw 2vw;
 }
 
-#portfolio-container .carousel .carousel-inner .port-info-container .port-body .tech em {
+#portfolio-container .carousel .carousel-inner .port-info-container .port-body .port-text .tech em {
   color: #ec583f;
   font-style: bold;
 }
 
 #portfolio-container .carousel .carousel-inner .port-img-container img.port-img {
-  height: 90vh;
+  height: 95vh;
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: center;

@@ -47,7 +47,7 @@ var rockPaperScissors = {
 
 var giphyAPP = {
      id: 'giphy',
-     largeImg: 'assets/images/compGiphy.jpg',
+     largeImg: 'assets/images/musically-giph.png',
      title: 'Musically GIPH-ted',
      about:
           'Search for GIFs of bands and musicians with this application, which implements the GIPHY API. Save your favorite searches and find them next time, with the help of session storage. Future expansion of this mini-app includes searching the Spotify API for each saved artist.',
@@ -60,7 +60,7 @@ var giphyAPP = {
 
 var marvel = {
      id: 'project1',
-     largeImg: 'assets/images/compMarvel.jpg',
+     largeImg: 'assets/images/marvel-comics.png',
      title: 'Marvel-verse',
      about:
           'A collaborative group project utilizing the Marvel and OMDb APIs. Personal responsibilites for this project include all HTML and CSS, with the exception of the search bar, implementing the search history through session storage, and returning the movie posters from the OMDb API.',
@@ -99,7 +99,7 @@ var wgNode = {
 
 var bamazon = {
      id: 'bamazon',
-     largeImg: 'assets/images/compBamazon.gif',
+     largeImg: 'assets/images/bamazon.gif',
      title: 'Bamazon',
      about:
           'A nod to the online-retailer powerhouse, Bamazon acts as a storefront application utilizing the command line. There are three different views executed in this application: customer view, manager view, and superviser view. The customer view allows users to "buy" a certain quantity of their preferred item and notifies if there is an insufficient quantity for available for purchase. The manager view allows users to view products for sale, view low inventory (products with <5 items in stock), add to inventory, and add a new product. The supervisor view allows users to view product sales by department and create a new department, The three different views are related - a change in one view persists in other views. For example, if the manager adds a new item with in the manager view, that new item is available within the customer view for purchase and impacts product sales by department within the supervisor view.',
@@ -139,7 +139,7 @@ var burg = {
 
 var project2 = {
      id: 'project2',
-     largeImg: 'assets/images/CompP2.png',
+     largeImg: 'assets/images/pet-finder.png',
      title: 'Friendly Neighborhood Pet Finder',
      about:
           'A group project utilizing MySQL, the PetFinder API, and SASS. As lead front-end developer, I was responsible for all page aesthetics (HTML, CSS, JavaScript) and collaborating with the back-end team. All banners, images, and logos were drawn digitally myself. My favorite features were the two implementations of Bootstrap carousels.',
@@ -152,7 +152,7 @@ var project2 = {
 
 var austin = {
      id: 'austin',
-     largeImg: 'assets/images/AustinComp.png',
+     largeImg: 'assets/images/austin-acc.png',
      title: 'Austin Accumulated',
      about:
           'An application using Cheerio, Mongoose, Axios, and Express that scrapes three different Austin, Texas-focused websites: Austin Eater, Austin Culture Map, and Austin Monthly. Allows users to comment on articles, view previous comments, scrape new articles, clear articles, and save articles they want to come back to.',
@@ -219,8 +219,12 @@ function addPorts() {
                newDiv.attr('class', 'carousel-item port-card');
           }
           let newRow = $(`<div class='row'>`);
-          let imgContainer = $('<div class="port-img-container col-lg-6">');
-          let infoContainer = $(`<div class='port-info-container col-lg-6'>`);
+          let imgContainer = $(
+               '<div class="port-img-container col-lg-6 col-md-12">'
+          );
+          let infoContainer = $(
+               `<div class='port-info-container col-lg-6 col-md-12'>`
+          );
           var image = $('<img>');
           image.attr('src', optionsArray[i].largeImg).attr('class', 'port-img');
           imgContainer.append(image);
@@ -230,23 +234,23 @@ function addPorts() {
           var portTitle = $('<h2>')
                .attr('class', 'port-title')
                .html(optionsArray[i].title);
-          portBody.append(portTitle);
 
-          var portInfo = $('<p>').attr('class', 'port-text');
+          var portText = $('<p>').attr('class', 'port-text');
+          portText.append(portTitle);
           var link1 = `<a href='${optionsArray[i].deployed}' target="_blank">Deployed</>`;
           var link2 = `<a href='${optionsArray[i].gitHub}' target="_blank">GitHub Repo</a>`;
-          portInfo.append(link1 + ' | ' + link2);
-          var about = $("<p class='port-info'>").html(optionsArray[i].about);
-          portInfo.append(about);
+          portText.append(link1 + ' | ' + link2);
+          var info = $("<p class='port-info'>").html(optionsArray[i].about);
+          portText.append(info);
           var techSkills = $('<p class="tech">').html(
                '<em>Skills utilized: <br></em>' + optionsArray[i].skills
           );
           var techConcepts = $('<p class="tech">').html(
                '<em>Programming concepts: <br></em>' + optionsArray[i].concepts
           );
-          portInfo.append(techSkills);
-          portInfo.append(techConcepts);
-          portBody.append(portInfo);
+          portText.append(techSkills);
+          portText.append(techConcepts);
+          portBody.append(portText);
           infoContainer.append(portBody);
           newRow.append(infoContainer);
           newDiv.append(newRow);
