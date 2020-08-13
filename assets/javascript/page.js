@@ -1,6 +1,6 @@
 var wordGuess = {
      id: 'wordGuess',
-     largeImg: 'assets/images/compHM.png',
+     largeImg: 'assets/images/chicken-little.png',
      title: 'Chicken Little',
      about: `A word-guess game completed entirely with vanilla JavaScript - meaning there's not an ounce of jQuery to be found. A PG-play on the game Hangman, help Chicken Little guess the every letter in the unknown words before his sky falls. All images hand-drawn with love - watch the background change with each wrong guess!`,
      skills: `JavaScript, HTML, CSS.`,
@@ -11,7 +11,7 @@ var wordGuess = {
 
 var trivia = {
      id: 'trivia',
-     largeImg: 'assets/images/compBJ3.png',
+     largeImg: 'assets/images/trivia-game.png',
      title: 'Billy Joel Trivia Game',
      about: `A short trivia game dedicated to the Piano Man himself. For each question, a timer appears and ticks down from 20 seconds. After user responds to the individual question, the game displays the correct result and a relevant YouTube video. Once all questions have been answered, the user's game score is revealed with the option to play again.`,
      skills:
@@ -74,7 +74,7 @@ var marvel = {
 
 var liri = {
      id: 'liri',
-     largeImg: 'assets/images/liri.jpg',
+     largeImg: 'assets/images/liri.gif',
      title: 'LIRI',
      about: `A Node.js application that acts as a Language Interpretation and Recognition Interface - basically a refined search engine for the user. Users have the option to search for song information through Spotify, movie information through OMDb, and concert information through Bands In Town. Searches are stored in a separate file, essentially acting as a search history. This aggregation of information is intended to save time for the user. As this is a Node.js application, it is not deployed on Heroku. However, a demonstration of a potential app prototype created with Adobe XD can be found <a href='https://youtu.be/1cJlDloAIVI' target='_blank'>here</a>`,
      skills:
@@ -125,7 +125,7 @@ var friendFinder = {
 
 var burg = {
      id: 'burg',
-     largeImg: 'assets/images/CompBurg2.png',
+     largeImg: 'assets/images/build-burg.gif',
      title: 'Build-a-Burg',
      about:
           'A full-stack application utilizing a MySQL database and all CRUD operations. Users act as customers - they can place an order, which will then be stored in the database and be displayed on screen. Customers can pick up their order, re-order their burger, or delete the order permanently.',
@@ -166,7 +166,7 @@ var austin = {
 
 var click = {
      id: 'click',
-     largeImg: 'assets/images/clickGame.png',
+     largeImg: 'assets/images/memory-game.gif',
      title: 'Huperzia - a memory game',
      about:
           'Huperzia is known as a memory enhancer and this application is just that. Test your memory by ensuring you never click on the same plant twice. Application utilizes React to shuffle plants and update your score and high score.',
@@ -201,11 +201,11 @@ var optionsArray = [
      liri,
      burg,
      trivia,
-     friendFinder,
+     // friendFinder,
      click,
-     rpgGame,
+     // rpgGame,
      wordGuess,
-     wgNode,
+     // wgNode,
 ];
 
 var currentPick;

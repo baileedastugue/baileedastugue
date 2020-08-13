@@ -121,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #portfolio-container .carousel .carousel-inner .port-img-container img.port-img {
-  height: 95vh;
+  height: 90vh;
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: center;
