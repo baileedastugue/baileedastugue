@@ -76,6 +76,7 @@ h1, h2, h3, h4, h5, h6 {
         }
         .carousel-inner {
             .port-info-container {
+                position: relative;
                 .port-card {
                     outline: none;
                     border: none;
@@ -90,6 +91,18 @@ h1, h2, h3, h4, h5, h6 {
                     .port-text {
                         text-align: center;
                         font-size: 1.6rem;
+                        position: absolute;
+                        top: 50%; 
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 80%;
+                    }
+                    .port-title {
+                        width: 80%;
+                        position: absolute;
+                        top: 19%; 
+                        left: 53%;
+                        transform: translate(-50%, -50%);
                     }
                     .port-info {
                         text-align: justify;
@@ -107,10 +120,11 @@ h1, h2, h3, h4, h5, h6 {
             }
             .port-img-container {
                 img.port-img {
-                    // max-height: 100vh;
-                    width: 100%;
+                    height: 90vh;
+                    // width: 100%;
                     object-fit: contain;
                     object-position: center;
+                    float: right;
                 }
             }
         }
