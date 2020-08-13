@@ -3,9 +3,12 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
-  font-size: 1em;
-  font-size: 1.3em;
+  font-size: 1.6rem;
   font-weight: 300;
+}
+
+html {
+  font-size: 10px;
 }
 
 #wrapper {
@@ -35,14 +38,14 @@ a:hover {
   z-index: -10;
   right: -8vw;
   top: 27vw;
-  padding: 0px;
-  margin: 0px;
+  padding: 0rem;
+  margin: 0rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: #ec583f;
   font-family: 'Permanent Marker', cursive;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.1rem;
 }
 
 #portfolio-container {
@@ -54,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: left;
   font-family: 'Playfair Display', serif;
   color: black;
-  font-size: 4em;
+  font-size: 6rem;
 }
 
 #portfolio-container .carousel {
@@ -65,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: black;
   top: 100%;
   position: absolute;
-  padding: 0px;
+  padding: 0rem;
   height: 4vw;
   width: 4vw;
   border-radius: 4vw;
@@ -79,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
 #portfolio-container .carousel .carousel-inner .port-info-container .port-body {
   overflow-y: auto;
   overflow-x: hidden;
-  font-size: 1em;
+  font-size: 2rem;
 }
 
 #portfolio-container .carousel .carousel-inner .port-info-container .port-body p a:hover {
@@ -88,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #portfolio-container .carousel .carousel-inner .port-info-container .port-body .port-text {
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.6rem;
 }
 
 #portfolio-container .carousel .carousel-inner .port-info-container .port-body .port-info {
@@ -98,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #portfolio-container .carousel .carousel-inner .port-info-container .port-body .tech {
   text-align: left;
-  margin: 1vw 6vw;
+  margin: 1vw 2vw;
 }
 
 #portfolio-container .carousel .carousel-inner .port-info-container .port-body .tech em {
@@ -147,7 +150,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 5vw;
   font-family: 'Playfair Display', serif;
   color: black;
-  font-size: 4em;
+  font-size: 4rem;
 }
 
 #contact-container .container .link-container {
@@ -159,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 10vw;
   float: right;
   margin-top: 15vw;
-  margin-right: 30px;
+  margin-right: 3rem;
 }
 
 #contact-container::after {
@@ -182,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: left;
   font-family: 'Playfair Display', serif;
   color: black;
-  font-size: 4em;
+  font-size: 6rem;
 }
 
 #about-container #postersCarousel {
@@ -248,7 +251,7 @@ p a:hover {
 }
 
 .p-right .text-focus {
-  font-size: 1.3em;
+  font-size: 1.6rem;
   font-weight: 300;
 }
 
