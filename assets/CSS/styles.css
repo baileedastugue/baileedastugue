@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #portfolio-container {
   height: 100vh;
-  margin: 1vh 1vw;
+  margin: 1vh 1vw 5vh;
 }
 
 #portfolio-container h1 {
@@ -61,97 +61,78 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 6rem;
 }
 
-#portfolio-container .carousel {
-  position: relative;
-}
-
-#portfolio-container .carousel .carousel-inner .port-info-container {
-  position: relative;
-}
-
-#portfolio-container .carousel .carousel-inner .port-info-container .port-card {
-  outline: none;
-  border: none;
-}
-
 #portfolio-container .carousel .carousel-inner .port-info-container .port-body {
+  height: 100%;
   font-size: 2rem;
+  position: relative;
 }
 
 #portfolio-container .carousel .carousel-inner .port-info-container .port-body p a:hover {
   color: black;
 }
 
-#portfolio-container .carousel .carousel-inner .port-info-container .port-body .port-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 100;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+#portfolio-container .carousel .carousel-inner .port-info-container .port-body .projectInfo {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 1rem 2rem;
   width: 90%;
+  margin: 0;
 }
 
-#portfolio-container .carousel .carousel-inner .port-info-container .port-body .port-text .port-title {
-  width: 100%;
-}
-
-#portfolio-container .carousel .carousel-inner .port-info-container .port-body .port-text .port-info {
-  text-align: justify;
+#portfolio-container .carousel .carousel-inner .port-info-container .port-body .projectInfo .tech {
+  text-align: left;
   margin: 1vw;
 }
 
-#portfolio-container .carousel .carousel-inner .port-info-container .port-body .port-text .tech {
-  text-align: left;
-  margin: 1vw 2vw;
-  position: relative;
-}
-
-#portfolio-container .carousel .carousel-inner .port-info-container .port-body .port-text .tech em {
+#portfolio-container .carousel .carousel-inner .port-info-container .port-body .projectInfo .tech em {
   color: #ec583f;
   font-style: bold;
 }
 
 #portfolio-container .carousel .carousel-inner .port-info-container .port-body .indicator-container {
-  width: 13vw;
-  position: relative;
-  margin-bottom: 5vh;
+  height: 3vh;
+  width: 20rem;
+  position: absolute;
+  bottom: 0;
+  margin-left: 3vw;
   padding: 0;
 }
 
 #portfolio-container .carousel .carousel-inner .port-info-container .port-body .indicator-container p {
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  -webkit-transform: translate(-45%, -10%);
-          transform: translate(-45%, -10%);
+  text-align: center;
+  margin-left: 5rem;
+  width: 10rem;
 }
 
 #portfolio-container .carousel .carousel-inner .port-info-container .port-body .indicator-container a.carousel-control-next, #portfolio-container .carousel .carousel-inner .port-info-container .port-body .indicator-container a.carousel-control-prev {
   opacity: 1;
   padding: 1rem 0rem;
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 #portfolio-container .carousel .carousel-inner .port-info-container .port-body .indicator-container a.carousel-control-next img, #portfolio-container .carousel .carousel-inner .port-info-container .port-body .indicator-container a.carousel-control-prev img {
   position: absolute;
   width: 5rem;
-  display: block;
+}
+
+#portfolio-container .carousel .carousel-inner .port-img-container {
+  position: relative;
+  height: 90vh;
 }
 
 #portfolio-container .carousel .carousel-inner .port-img-container img.port-img {
-  height: 90vh;
+  height: 100vh;
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: top left;
+     object-position: top left;
   float: right;
+}
+
+#spacer {
+  height: 0vh;
+  width: 100%;
+  display: block;
 }
 
 /* width */
@@ -250,6 +231,10 @@ h1, h2, h3, h4, h5, h6 {
   float: right;
 }
 
+#about-container #postersCarousel .image-reel {
+  display: none;
+}
+
 #about-container #about-me img {
   width: 40vw;
   right: -10vw;
@@ -300,12 +285,14 @@ p a:hover {
   display: table;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   html {
     font-size: 8px;
   }
   #about-container #postersCarousel {
-    height: 50vw;
+    height: 40vw;
+    -o-object-position: right;
+       object-position: right;
     border-radius: 0vw 0vw 27vw 0vw;
   }
   #about-container #postersCarousel .main-poster {
@@ -317,6 +304,83 @@ p a:hover {
   }
   #contact-container .container .link-container {
     padding-right: 20vw;
+  }
+}
+
+@media (max-width: 991px) {
+  #portfolio-container {
+    height: 100vh;
+  }
+  #portfolio-container .carousel .carousel-inner .port-info-container {
+    margin-top: 0vh;
+  }
+  #portfolio-container .carousel .carousel-inner .port-info-container .port-body .projectInfo {
+    width: 90%;
+  }
+  #portfolio-container .carousel .carousel-inner .port-img-container {
+    height: 50vh;
+  }
+  #portfolio-container .carousel .carousel-inner .port-img-container img.port-img {
+    width: 100%;
+    max-height: 50vh;
+    float: center;
+  }
+  #spacer {
+    height: 5vh;
+  }
+  #postersCarousel {
+    height: 30vw;
+    overflow-y: auto;
+    margin-bottom: 2vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: -2;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-radius: 0vw 0vw 50vw 0vw;
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+  }
+  #postersCarousel .carousel {
+    display: none;
+  }
+  #postersCarousel .image-reel {
+    display: unset;
+  }
+}
+
+@media (max-width: 880px) {
+  #portfolio-container .carousel .carousel-inner .port-info-container {
+    margin-top: 0vh;
+  }
+  #portfolio-container .carousel .carousel-inner .port-info-container .port-body .projectInfo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #spacer {
+    height: 15vh;
+  }
+}
+
+@media (max-width: 615px) {
+  #spacer {
+    height: 28vh;
+  }
+}
+
+@media (max-width: 500px) {
+  #spacer {
+    height: 37vh;
+  }
+}
+
+@media (max-width: 450px) {
+  #spacer {
+    height: 45vh;
   }
 }
 /*# sourceMappingURL=styles.css.map */

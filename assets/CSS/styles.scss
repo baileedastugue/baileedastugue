@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #portfolio-container{
     height: 100vh;
-    margin: 1vh 1vw;
+    margin: 1vh 1vw 5vh;
     h1 {
         margin-left: 5vw;
         text-align: left;
@@ -60,91 +60,73 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 6rem;
     }
     .carousel {
-        position: relative;
-        // .carousel-indicators {
-        //     bottom: 0vw;
-        //     position: absolute;
-        // }
         .carousel-inner {
             .port-info-container {
-                .port-card {
-                    outline: none;
-                    border: none;
-                }
-                position: relative;
                 .port-body {
+                    height: 100%;
                     font-size: 2rem;
+                    position: relative;
                     p a:hover{
                         color: black;
                     }
-                    .port-text {
-                        position: absolute;
-                        top: 50%; 
-                        left: 50%;
-                        z-index: 100;
-                        transform: translate(-50%, -50%);
+                    .projectInfo {
+                        overflow-y: scroll;
+                        overflow-x: hidden;
+                        padding: 1rem 2rem;
                         width: 90%;
-                        .port-title {
-                            width: 100%;
-                            // color: black;
-                        }
-                        .port-info {
-                            text-align: justify;
-                            margin: 1vw;
-                        }
+                        margin: 0;
                         .tech {
                             text-align: left;
-                            margin: 1vw 2vw;
+                            margin: 1vw;
                             em { 
                                 color: $focusColor;
                                 font-style: bold;
                             }
-                            position: relative;
                         }
                     }
                     .indicator-container {
-                        width: 13vw;
-                        // height: auto;
-                        // display: flex;
-                        // justify-content: space-between;
-                        position: relative;
+                        height: 3vh;
+                        width: 20rem;
+                        position: absolute;
+                        bottom: 0;
+                        margin-left: 3vw;
                         p {
-                            // width: 5vw;
-                            top: 50%;
-                            left: 50%;
-                            position: absolute;
-                            transform: translate(-45%, -10%);
-                        }
+                            text-align: center;  
+                            margin-left: 5rem;
+                            width: 10rem;
+                            }
                         a.carousel-control-next, a.carousel-control-prev {
                             opacity: 1;
                             padding: 1rem 0rem;
                             position: absolute;
-                            display: flex;
-                            justify-content: space-between; 
                             img {
                                 position: absolute;
                                 width: 5rem;
-                            display: block;
-    
                                 }
                         }
-                        margin-bottom: 5vh;
                         padding: 0;
                     }
                 }
             }
             .port-img-container {
+                position: relative;
+                height: 90vh;
                 img.port-img {
-                    height: 90vh;
-                    // width: 100%;
+                    // position: absolute;
+                    height: 100vh;
                     object-fit: contain;
-                    object-position: center;
+                    object-position: top left;
                     float: right;
                 }
             }
         }
     }
 }
+        #spacer {
+            height: 0vh;
+            width: 100%;
+            display: block;
+        }
 
 /* width */
 ::-webkit-scrollbar {
@@ -238,6 +220,9 @@ h1, h2, h3, h4, h5, h6 {
                 float: right;   
             }
         }
+        .image-reel {
+            display: none;
+        }
     }
     #about-me {
         img {
@@ -294,13 +279,14 @@ p {
     display: table;
   }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
     html {
         font-size: 8px;
     }
     #about-container {
         #postersCarousel {
-            height: 50vw;
+            height: 40vw;
+            object-position: right;
             border-radius: 0vw 0vw 27vw 0vw;
             .main-poster {
                 height: 50vw;
@@ -320,225 +306,166 @@ p {
     }
 }
 
-// @media (max-width: 991px) {
-//     .p-right {
-//         padding-left: 30%;
-//     }
-//     #about-container {
-//         #postersCarousel {
-//             display: none;
-//         }
-//     }
-//     .img-container {
-//         #coffee {
-//             top: 30vw;
-//         }
-//     }
-//     #contact-container {
-//         .container {
-//             .link-container {
-//                 padding-right: 8vw;
-//                 .link {
-//                     width: 12vw;
-//                 }
-//             }
-//         }
-//     }
-// }
+@media (max-width: 991px) {
+   
+    #portfolio-container{
+        height: 100vh;
+        .carousel .carousel-inner {
+            .port-info-container {
+                margin-top: 0vh;
+                .port-body {
+                    .projectInfo {
+                        width: 90%;       
+                    }
+                }
+            }
+            .port-img-container {
+                height: 50vh;
+                img.port-img {
+                    width: 100%;
+                    max-height: 50vh;
+                    float: center;
+                }
+            }
+        }
+    }
+    #spacer {
+        height: 5vh;
+    }
+    #postersCarousel {
+        height: 30vw;
+        overflow-y: auto;
+        margin-bottom: 2vw;
+        display: flex;
+        z-index: -2;
+        justify-content: space-between;
+        border-radius: 0vw 0vw 50vw 0vw;
+        transform: scaleX(-1);
+        .carousel {
+            display: none;
+        }
+        .image-reel {
+            display: unset;
+        }
+    }
+   
+}
 
-// @media (max-width: 880px) {
-//     .img-container {
-//         #coffee {
-//             margin-top: 39vw;
-//         }
-//     }
-//     #contact-container {
-//         .container {
-//             .link-container {
-//                 padding-right: 13vw;
-//                 .link {
-//                     opacity: 100%;
-//                     width: 12vw;
-//                     margin-top: 10vw;
-//                 }
-//             }
-//         }
-//     }
-// }
+@media (max-width: 880px) {
+    #portfolio-container{
+        .carousel .carousel-inner {
+            .port-info-container {
+                margin-top: 0vh;
+                .port-body {
+                    .projectInfo {
+                        width: 100%;       
+                    }
+                }
+            }
+        }
+    }
+}
 
-// @media (max-width: 768px) {
-//     .img-container {
-//         #coffee {
-//             margin-top: 60vw;
-//         }
-//     }
-//     #portfolio-container{
-//         .carousel {
-//             .carousel-indicators {
-//                 bottom: 15vw;
-//             }
-//             .carousel-inner {
-//                 .card {
-//                     height: 65vw;
-//                    .card-body {
-//                        height: 15vw;
-//                     p {
-//                         margin: 1vw;
-//                     }
-//                    }
-//                    img.port {
-//                        height: 50vw;
+@media (max-width: 768px) {
+    // #portfolio-container{
+    //     height: 100vh;
+    //     .carousel .carousel-inner {
+    //         .port-info-container {
+    //             margin-top: 0vh;
+    //             .port-body {
+    //                 .projectInfo {
+    //                     width: 90%;       
+    //                 }
+    //             }
+    //         }
+    //         .port-img-container {
+    //             height: 50vh;
+    //             img.port-img {
+    //                 width: 100%;
+    //                 max-height: 50vh;
+    //                 float: center;
+    //             }
+    //         }
+    //     }
+    // }
+    #spacer {
+        height: 15vh;
+    }
+}
 
-//                    }
-//                 }
-//             }
-//         }
-//     }
-//     #contact-container {
-//         .container {
-//             .link-container {
-//                 padding-right: 5vw;
-//                 .link {
-//                     width: 12vw;
-//                     margin-top: 10vw;
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// @media (max-width: 615px) {
-//     .img-container {
-//         #coffee {
-//             margin-top: 100vw;
-//         }
-//     }
-//     #portfolio-container{
-//         .carousel {
-//             .carousel-indicators {
-//                 bottom:20vw;
-//             }
-//             .carousel-inner {
-//                 .card {
-//                     height: 70vw;
-//                    .card-body {
-//                        height: 20vw;
-//                    }
-//                    img.port {
-//                     height: 50vw;
-//                 }
-//                 }
-//             }
-//         }
-//     }  
-//     #contact-container {
-//         .container {
-//             height: 60vw;
-//             .link-container {
-//                 padding-right: 9vw;
-//                 .link {
-//                     width: 12vw;
-//                     float: right;
-//                     margin-top: 5vw;
-//                 }
-//             }
-//         }
-//     }
+@media (max-width: 615px) {
+    // .img-container {
+    //     #coffee {
+    //         margin-top: 100vw;
+    //     }
+    // }
+    // #portfolio-container{
+    //     .carousel {
+    //         .carousel-indicators {
+    //             bottom:20vw;
+    //         }
+    //         .carousel-inner {
+    //             .card {
+    //                 height: 70vw;
+    //                .card-body {
+    //                    height: 20vw;
+    //                }
+    //                img.port {
+    //                 height: 50vw;
+    //             }
+    //             }
+    //         }
+    //     }
+    // }  
+    // #portfolio-container{
+    //     height: 100vh;
+    //     .carousel .carousel-inner {
+    //         .port-info-container {
+    //             margin-top: 0vh;
+    //             .port-body {
+    //                 .projectInfo {
+    //                     width: 90%;       
+    //                 }
+    //             }
+    //         }
+    //         .port-img-container {
+    //             height: 50vh;
+    //             img.port-img {
+    //                 width: 100%;
+    //                 max-height: 50vh;
+    //                 float: center;
+    //             }
+    //         }
+    //     }
+    // }
+    #spacer {
+        height:28vh;
+    }
+    // #contact-container {
+    //     .container {
+    //         height: 60vw;
+    //         .link-container {
+    //             padding-right: 9vw;
+    //             .link {
+    //                 width: 12vw;
+    //                 float: right;
+    //                 margin-top: 5vw;
+    //             }
+    //         }
+    //     }
+    // }
   
-// }
 
-// @media (max-width: 500px) {
-//     .p-right {
-//         padding-left: 0%;
-//     }
-//     .img-container {
-//         #coffee {
-//             top: 25vw;
-//         }
-//     }
-//     #portfolio-container{
-//         .carousel {
-//             .carousel-indicators {
-//                 bottom:23vw;
-//             }
-//             a.carousel-control-next, a.carousel-control-prev {
-//                 margin: 27vw 0vw;
-//                 height: 6vw;
-//                 width: 6vw;
-//             }
-//             .carousel-inner {
-//                 .card {
-//                     height: 80vw;
-//                    .card-body {
-//                        height: 25vw;
-//                    }
-//                    img.port {
-//                     height: 55vw;
-//                 }
-//                 }
-//             }
-//         }
-//     }  
-//     #contact-container {
-//         .container {
-//             height: 65vw;
-//             .link-container {
-//                 padding-right: 15vw;
-//                 .link {
-//                     width: 12vw;
-//                 }
-//             }
-//         }
-//     }
-//     #contact-container::after {
-//         opacity: 60%;
-//     }
-// }
+}
 
-// @media (max-width: 450px) {
-//     .p-right {
-//         margin-right: 0;
-//     }
-//     .img-container {
-//         #coffee {
-//             top: 50vw;
-//         }
-//     }
-//     #portfolio-container{
-//         .carousel {
-//             .carousel-indicators {
-//                 bottom:33vw;
-//             }
-//             a.carousel-control-next, a.carousel-control-prev {
-//                 margin: 27vw 0vw;
-//                 height: 6vw;
-//                 width: 6vw;
-//             }
-//             .carousel-inner {
-//                 .card {
-//                     height: 90vw;
-//                    .card-body {
-//                        height: 35vw;
-//                    }
-//                    img.port {
-//                     height: 55vw;
-//                 }
-//                 }
-//             }
-//         }
-//     } 
-//     #contact-container {
-//         margin-top: 5vw;
-//         .container {
-//             height: 70vw;
-//             .link-container {
-//                 padding-right: 0vw;
-//                 .link {
-//                     width: 15vw;
-//                     margin-top: 0vw;
-//                     float: right;
-//                 }
-//             }
-//         }
-//     }
-// }
+@media (max-width: 500px) {
+    #spacer {
+        height: 37vh;
+    }
+}
+
+@media (max-width: 450px) {
+    #spacer {
+        height: 45vh;
+    }
+}

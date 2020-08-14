@@ -229,6 +229,10 @@ function addPorts() {
           image.attr('src', optionsArray[i].largeImg).attr('class', 'port-img');
           imgContainer.append(image);
           newRow.append(imgContainer);
+
+          var portBody = $('<div>').attr('class', 'port-body');
+          // Row One
+          const rowOne = $('<div class="row">');
           const navigationDiv = $('<div class="indicator-container">');
           const lArrow = $(
                '<a class="carousel-control-prev" href="#demo" data-slide="prev"><img src="./assets/images/left-arrow.png" class="caro-control"></a>'
@@ -237,33 +241,42 @@ function addPorts() {
                '<a class="carousel-control-next" href="#demo" data-slide="next"><img src="./assets/images/right-arrow.png" class="caro-control"></a>'
           );
           let location = $(`<p>${i + 1} of ${optionsArray.length}</p>`);
-          navigationDiv.append(lArrow).append(location).append(rArrow);
-          var portBody = $('<div>').attr('class', 'port-body');
-          var portTitle = $('<h2>')
+          rowOne.append(
+               navigationDiv.append(lArrow).append(location).append(rArrow)
+          );
+
+          // Row two: title
+          const rowTwo = $('<div class="row">');
+          const portTitle = $('<h2>')
                .attr('class', 'port-title')
                .html(optionsArray[i].title);
-          var portText = $('<p>').attr('class', 'port-text');
+          rowTwo.append(portTitle);
 
-          portText.append(portTitle);
-          var link1 = `<a href='${optionsArray[i].deployed}' target="_blank">Deployed</>`;
-          var link2 = `<a href='${optionsArray[i].gitHub}' target="_blank">GitHub Repo</a>`;
-          portText.append(link1 + ' | ' + link2);
+          // Row three: links
+          const rowThree = $('<div class="row">');
+          const link1 = `<a href='${optionsArray[i].deployed}' target="_blank">Deployed</>`;
+          const link2 = `<a href='${optionsArray[i].gitHub}' target="_blank">GitHub Repo</a>`;
+          rowThree.append(link1).append(' | ').append(link2);
+
+          // Row four: includes about, skills, and concepts
+          const rowFour = $('<div class="row">');
           var info = $("<p class='port-info'>").html(optionsArray[i].about);
-          portText.append(info);
           var techSkills = $('<p class="tech">').html(
                '<em>Skills utilized: <br></em>' + optionsArray[i].skills
           );
           var techConcepts = $('<p class="tech">').html(
                '<em>Programming concepts: <br></em>' + optionsArray[i].concepts
           );
-          portText.append(techSkills);
-          portText.append(techConcepts);
-          portBody.append(portText);
-          portBody.append(navigationDiv);
+          rowFour.append(info).append(techSkills).append(techConcepts);
+
+          const projectInfo = $('<div class="projectInfo">');
+
+          projectInfo.append(rowTwo).append(rowThree).append(rowFour);
+
+          portBody.append(projectInfo).append(rowOne);
 
           infoContainer.append(portBody);
-          newRow.append(infoContainer);
-          newDiv.append(newRow);
+          newDiv.append(newRow.append(infoContainer));
           $('#portfolio-container .carousel-inner').append(newDiv);
      }
 }
