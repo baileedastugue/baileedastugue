@@ -53,6 +53,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 100vh;
     margin: 1vh 1vw;
     h1 {
+        margin-left: 5vw;
         text-align: left;
         font-family: 'Playfair Display', serif;
         color: black;
@@ -64,16 +65,6 @@ h1, h2, h3, h4, h5, h6 {
         //     bottom: 0vw;
         //     position: absolute;
         // }
-        a.carousel-control-next, a.carousel-control-prev {
-            background-color: black;
-            top: 100%;
-            position: absolute;
-            
-            padding: 0rem;
-            height: 4vw;
-            width: 4vw;
-            border-radius: 4vw;
-        }
         .carousel-inner {
             .port-info-container {
                 .port-card {
@@ -108,7 +99,37 @@ h1, h2, h3, h4, h5, h6 {
                                 color: $focusColor;
                                 font-style: bold;
                             }
+                            position: relative;
                         }
+                    }
+                    .indicator-container {
+                        width: 13vw;
+                        // height: auto;
+                        // display: flex;
+                        // justify-content: space-between;
+                        position: relative;
+                        p {
+                            // width: 5vw;
+                            top: 50%;
+                            left: 50%;
+                            position: absolute;
+                            transform: translate(-45%, -10%);
+                        }
+                        a.carousel-control-next, a.carousel-control-prev {
+                            opacity: 1;
+                            padding: 1rem 0rem;
+                            position: absolute;
+                            display: flex;
+                            justify-content: space-between; 
+                            img {
+                                position: absolute;
+                                width: 5rem;
+                            display: block;
+    
+                                }
+                        }
+                        margin-bottom: 5vh;
+                        padding: 0;
                     }
                 }
             }
@@ -154,7 +175,7 @@ h1, h2, h3, h4, h5, h6 {
             padding-top: 5vw;
             font-family: 'Playfair Display', serif;
             color: black;
-            font-size: 4rem;
+            font-size: 6rem;
         }
         .link-container {
             padding-right: 8vw;
@@ -183,6 +204,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #about-container {
     position: relative;
+    
     h1 {
         text-align: left;
         font-family: 'Playfair Display', serif;
@@ -256,10 +278,9 @@ p {
     em {
         color: $focusColor;
     }    
-    .text-focus {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         font-weight: 300;
-    }
+    
 }
 
 .p-left {
@@ -273,97 +294,31 @@ p {
     display: table;
   }
 
-// @media (max-width: 1500px) { 
-//     .p-right {
-//         padding-left: 20%;
-//         margin-right: 5vw;
-//     }
-//     #about-container {
-//         #postersCarousel {
-//             height: 35vw;
-//             // margin-top: 5vw;
-//             border-radius: 0vw 0vw 50vw 0vw;
-//             .main-poster {
-//                 height: 35vw;
-//             }
-//         }
-//     }
-//     .img-container {
-//         overflow: hidden;
-//         #coffee {
-//             margin-top: 10vw;
-//             top: 29vw;
-//         }
-//     }
-// }
-
-// @media (max-width: 1200px) {
-//     .p-right {
-//         padding-left: 10%;
-//         margin-right: 2vw;
-//     }
-//     #about-container {
-//         #postersCarousel {
-//             height: 45vw;
-//             // margin-top: 5vw;
-//             border-radius: 0vw 0vw 27vw 0vw;
-//             .main-poster {
-//                 height: 45vw;
-//             }
-//         }
-//     }
-//     .img-container {
-//         #coffee {
-//             margin-top: 20vw;
-//         }
-//     }
-//     #portfolio-container{
-//         .carousel {
-//             .carousel-indicators {
-//                 bottom: 15vw;
-//             }
-//             .carousel-inner {
-//                 .card {
-//                     height: 55vw;
-//                    .card-body {
-//                        height: 15vw;
-//                    }
-//                 }
-//             }
-//         }
-//     }
-//     #contact-container {
-//         .container {
-//             .link-container {
-//                 padding-right: 14vw;
-//             }
-//         }
-//     }       
-// }
-
-// @media (max-width: 1000px) {
-//     #about-container {
-//         #postersCarousel {
-//             height: 50vw;
-//             border-radius: 0vw 0vw 27vw 0vw;
-//             .main-poster {
-//                 height: 50vw;
-//             }
-//         }
-//     }
-//     .p-right {
-//         padding-left: 0%;
-//     }
-//     #contact-container {
-//         height: 56vw;
-//         .container {
-//             .link-container {
-//                 padding-right: 20vw;
-//             }
-//         }
-//     }
-  
-// }
+@media (max-width: 1000px) {
+    html {
+        font-size: 8px;
+    }
+    #about-container {
+        #postersCarousel {
+            height: 50vw;
+            border-radius: 0vw 0vw 27vw 0vw;
+            .main-poster {
+                height: 50vw;
+            }
+        }
+    }
+    .p-right {
+        padding-left: 0%;
+        margin-right: 1vw;
+    }
+    #contact-container {
+        .container {
+            .link-container {
+                padding-right: 20vw;
+            }
+        }
+    }
+}
 
 // @media (max-width: 991px) {
 //     .p-right {

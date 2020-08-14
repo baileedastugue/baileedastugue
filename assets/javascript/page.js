@@ -220,22 +220,30 @@ function addPorts() {
           }
           let newRow = $(`<div class='row'>`);
           let imgContainer = $(
-               '<div class="port-img-container col-lg-6 col-md-12">'
+               '<div class="port-img-container col-lg-6 col-sm-12">'
           );
           let infoContainer = $(
-               `<div class='port-info-container col-lg-6 col-md-12'>`
+               `<div class='port-info-container col-lg-6 col-sm-12'>`
           );
           var image = $('<img>');
           image.attr('src', optionsArray[i].largeImg).attr('class', 'port-img');
           imgContainer.append(image);
           newRow.append(imgContainer);
-
+          const navigationDiv = $('<div class="indicator-container">');
+          const lArrow = $(
+               '<a class="carousel-control-prev" href="#demo" data-slide="prev"><img src="./assets/images/left-arrow.png" class="caro-control"></a>'
+          );
+          const rArrow = $(
+               '<a class="carousel-control-next" href="#demo" data-slide="next"><img src="./assets/images/right-arrow.png" class="caro-control"></a>'
+          );
+          let location = $(`<p>${i + 1} of ${optionsArray.length}</p>`);
+          navigationDiv.append(lArrow).append(location).append(rArrow);
           var portBody = $('<div>').attr('class', 'port-body');
           var portTitle = $('<h2>')
                .attr('class', 'port-title')
                .html(optionsArray[i].title);
-
           var portText = $('<p>').attr('class', 'port-text');
+
           portText.append(portTitle);
           var link1 = `<a href='${optionsArray[i].deployed}' target="_blank">Deployed</>`;
           var link2 = `<a href='${optionsArray[i].gitHub}' target="_blank">GitHub Repo</a>`;
@@ -251,6 +259,8 @@ function addPorts() {
           portText.append(techSkills);
           portText.append(techConcepts);
           portBody.append(portText);
+          portBody.append(navigationDiv);
+
           infoContainer.append(portBody);
           newRow.append(infoContainer);
           newDiv.append(newRow);
