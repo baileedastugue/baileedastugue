@@ -91,6 +91,7 @@ h1, h2, h3, h4, h5, h6 {
                         bottom: 0;
                         margin-left: 3vw;
                         p {
+                            background-color: $background;
                             text-align: center;  
                             margin-left: 5rem;
                             width: 10rem;
@@ -111,22 +112,29 @@ h1, h2, h3, h4, h5, h6 {
             .port-img-container {
                 position: relative;
                 height: 90vh;
+                // width: auto;
+                // text-align: right;
                 img.port-img {
                     // position: absolute;
                     height: 100vh;
+                    // width: fit-content  ;
                     object-fit: contain;
                     object-position: top left;
                     float: right;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto 
                 }
             }
         }
     }
 }
-        #spacer {
-            height: 0vh;
-            width: 100%;
-            display: block;
-        }
+
+#spacer {
+    height: 0vh;
+    width: 100%;
+    display: block;
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -193,17 +201,6 @@ h1, h2, h3, h4, h5, h6 {
         color: black;
         font-size: 6rem;
     }
-
-    // div#squiggle1{
-    //     background-image: url('../images/squiggle.png');
-    //     background-repeat: no-repeat;
-    //     height: 100%;
-    //     width: 75vw;
-    //     z-index: -1;
-    //     position: absolute;
-    //     top: -17vw;
-    //     left: -10vw;
-    // }
     #postersCarousel {
         height: 30vw;
         overflow-y: auto;
@@ -307,45 +304,86 @@ p {
 }
 
 @media (max-width: 991px) {
-   
+    #about-container {
+        #postersCarousel {
+            .carousel-inner {
+                display: none;
+            }
+            .image-reel {
+                display: flex;
+            }
+        }
+    }
     #portfolio-container{
         height: 100vh;
         .carousel .carousel-inner {
             .port-info-container {
                 margin-top: 0vh;
                 .port-body {
+                    height: 32vh;
                     .projectInfo {
-                        width: 90%;       
+                        width: 100%;
+                        max-height: 30vh;       
+                    }
+                    .indicator-container {
+                        width: 100%;
+                        // bottom: -2vh;
+                        left: -1vw; 
+                        padding: 0rem 2rem;
+                        p {
+                            text-align: center;  
+                            margin-left: 50%;
+                            transform: translate(-50%);
+                            width: 10rem;
+                            }
+                        a.carousel-control-next, a.carousel-control-prev {
+                            opacity: 1;
+                            padding: 1rem 0rem;
+                            position: absolute;
+                            // left: -1vw;
+                            img {
+                                position: absolute;
+                                width: 5rem;
+                                }
+                        }
+                        a.carousel-control-next {
+                            right: 25vw;
+                        }
+                        a.carousel-control-prev {
+                            left: 25vw;
+                        }
                     }
                 }
             }
             .port-img-container {
-                height: 50vh;
+                height: 70vh;    
+                text-align: center;
                 img.port-img {
-                    width: 100%;
-                    max-height: 50vh;
-                    float: center;
+                    max-height: 70vh;    
+                    float: unset;
                 }
             }
         }
     }
-    #spacer {
-        height: 5vh;
-    }
     #postersCarousel {
-        height: 30vw;
-        overflow-y: auto;
-        margin-bottom: 2vw;
-        display: flex;
-        z-index: -2;
-        justify-content: space-between;
-        border-radius: 0vw 0vw 50vw 0vw;
-        transform: scaleX(-1);
+        position: relative;
         .carousel {
             display: none;
         }
         .image-reel {
             display: unset;
+            text-align: center;
+            position: absolute;
+            // margin-left: auto;
+            // right: 50%;
+            left: 4%;
+            img {
+                width: 30vw;
+                height: 30vw;
+                object-fit: cover;
+                overflow-y: none;
+                overflow: hidden;
+            }
         }
     }
    
@@ -364,108 +402,29 @@ p {
             }
         }
     }
-}
-
-@media (max-width: 768px) {
-    // #portfolio-container{
-    //     height: 100vh;
-    //     .carousel .carousel-inner {
-    //         .port-info-container {
-    //             margin-top: 0vh;
-    //             .port-body {
-    //                 .projectInfo {
-    //                     width: 90%;       
-    //                 }
-    //             }
-    //         }
-    //         .port-img-container {
-    //             height: 50vh;
-    //             img.port-img {
-    //                 width: 100%;
-    //                 max-height: 50vh;
-    //                 float: center;
-    //             }
-    //         }
-    //     }
-    // }
     #spacer {
-        height: 15vh;
+        height: 1vh;
     }
 }
 
-@media (max-width: 615px) {
-    // .img-container {
-    //     #coffee {
-    //         margin-top: 100vw;
-    //     }
-    // }
-    // #portfolio-container{
-    //     .carousel {
-    //         .carousel-indicators {
-    //             bottom:20vw;
-    //         }
-    //         .carousel-inner {
-    //             .card {
-    //                 height: 70vw;
-    //                .card-body {
-    //                    height: 20vw;
-    //                }
-    //                img.port {
-    //                 height: 50vw;
-    //             }
-    //             }
-    //         }
-    //     }
-    // }  
-    // #portfolio-container{
-    //     height: 100vh;
-    //     .carousel .carousel-inner {
-    //         .port-info-container {
-    //             margin-top: 0vh;
-    //             .port-body {
-    //                 .projectInfo {
-    //                     width: 90%;       
-    //                 }
-    //             }
-    //         }
-    //         .port-img-container {
-    //             height: 50vh;
-    //             img.port-img {
-    //                 width: 100%;
-    //                 max-height: 50vh;
-    //                 float: center;
-    //             }
-    //         }
-    //     }
-    // }
-    #spacer {
-        height:28vh;
+@media (max-width: 550px) {
+    #portfolio-container{
+        .carousel .carousel-inner {
+            .port-info-container {
+                .port-body {
+                    .indicator-container {
+                        a.carousel-control-next {
+                            right: 20vw;
+                        }
+                        a.carousel-control-prev {
+                            left: 20vw;
+                        }
+                    }
+                }
+            }
+        }
     }
-    // #contact-container {
-    //     .container {
-    //         height: 60vw;
-    //         .link-container {
-    //             padding-right: 9vw;
-    //             .link {
-    //                 width: 12vw;
-    //                 float: right;
-    //                 margin-top: 5vw;
-    //             }
-    //         }
-    //     }
-    // }
-  
-
-}
-
-@media (max-width: 500px) {
     #spacer {
-        height: 37vh;
-    }
-}
-
-@media (max-width: 450px) {
-    #spacer {
-        height: 45vh;
+        height: 3vh;
     }
 }

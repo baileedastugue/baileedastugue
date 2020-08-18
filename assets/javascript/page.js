@@ -231,7 +231,8 @@ function addPorts() {
           newRow.append(imgContainer);
 
           var portBody = $('<div>').attr('class', 'port-body');
-          // Row One
+
+          // Row One: navigation arrows (forward and backward) for portfolio carousel
           const rowOne = $('<div class="row">');
           const navigationDiv = $('<div class="indicator-container">');
           const lArrow = $(
@@ -271,9 +272,8 @@ function addPorts() {
 
           const projectInfo = $('<div class="projectInfo">');
 
-          projectInfo.append(rowTwo).append(rowThree).append(rowFour);
-
           portBody.append(projectInfo).append(rowOne);
+          projectInfo.append(rowTwo).append(rowThree).append(rowFour);
 
           infoContainer.append(portBody);
           newDiv.append(newRow.append(infoContainer));
