@@ -5,7 +5,7 @@ $color-black: #000000;
 $font-primary: 'Playfair Display', serif;
 $font-secondary: 'Permanent Marker', cursive;
 
-@import './mediaqueries';
+
 
 body {
     background-color: $color-background;
@@ -257,3 +257,5 @@ a.navbar-brand {
     clear: both;
     display: table;
   }
+
+  @import './mediaqueries';
