@@ -298,5 +298,7 @@ function addIndicators() {
      }
 }
 
-addPorts();
-addIndicators();
+$(document).ready(function () {
+     addPorts();
+     addIndicators();
+});
