@@ -176,32 +176,47 @@
       height: 0;
   }
   #portfolio-container{
-      margin-bottom: 0;
-      .port-info-container {
-          margin-top: -8vh;
-      }
-  }
+        margin-bottom: 0;
+        .port-info-container {
+            margin-top: -8vh;
+            #project-info {
+                padding: 0 10vw;
+            }
+        }
+    }
 }
 
 @media (max-width: 350px) {
   #portfolio-container{
+      height:100vh;
       .port-info-container {
-          margin-top: -15vh;
-          #project-info {
+        //   background-color: red;
+        height: 30vh; ;  
+        #project-info {
+            margin-top: -15vh;
               padding: 0 10vw;
           }
+          .indicator-container {
+            bottom: 8vh;
+          }
+      }
+      .port-img-container {
+          height: 60vh;
       }
   }
+  #spacer {
+      height: 25vh;
+  }
   #contact-container {
-      margin-top: -5vh;
+      margin-top: 5vh;
       h1 {
           top: 0;
       }
       .link-container {
-          top: 10vh;
+          top: 12vh;
           left: 25vw;
           img.link {
-              height: 4vh;
+              height: 5vh;
           }
       }
   }
@@ -210,10 +225,10 @@
 @media (max-width: 320px) {
   #portfolio-container{
       .port-info-container {
-          margin-top: -20vh;
+          margin-top: 20vh;
       }
   }
   #contact-container {
-      margin-top: -10vh;
+      margin-top: -5vh;
   }
 }

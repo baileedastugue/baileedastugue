@@ -86,6 +86,7 @@ a.navbar-brand img {
   height: 90vh;
   padding-right: 20vw;
   font-size: 2rem;
+  background-color: #EFE7DC;
 }
 
 #portfolio-container .port-info-container .indicator-container {
@@ -439,36 +440,52 @@ a.navbar-brand img {
   #portfolio-container .port-info-container {
     margin-top: -8vh;
   }
-}
-
-@media (max-width: 350px) {
-  #portfolio-container .port-info-container {
-    margin-top: -15vh;
-  }
   #portfolio-container .port-info-container #project-info {
     padding: 0 10vw;
   }
+}
+
+@media (max-width: 350px) {
+  #portfolio-container {
+    height: 100vh;
+  }
+  #portfolio-container .port-info-container {
+    height: 30vh;
+  }
+  #portfolio-container .port-info-container #project-info {
+    margin-top: -15vh;
+    padding: 0 10vw;
+  }
+  #portfolio-container .port-info-container .indicator-container {
+    bottom: 8vh;
+  }
+  #portfolio-container .port-img-container {
+    height: 60vh;
+  }
+  #spacer {
+    height: 25vh;
+  }
   #contact-container {
-    margin-top: -5vh;
+    margin-top: 5vh;
   }
   #contact-container h1 {
     top: 0;
   }
   #contact-container .link-container {
-    top: 10vh;
+    top: 12vh;
     left: 25vw;
   }
   #contact-container .link-container img.link {
-    height: 4vh;
+    height: 5vh;
   }
 }
 
 @media (max-width: 320px) {
   #portfolio-container .port-info-container {
-    margin-top: -20vh;
+    margin-top: 20vh;
   }
   #contact-container {
-    margin-top: -10vh;
+    margin-top: -5vh;
   }
 }
 /*# sourceMappingURL=styles.css.map */
