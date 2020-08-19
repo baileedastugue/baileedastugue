@@ -226,11 +226,12 @@ function addPorts() {
                `<div class='port-info-container col-lg-6 col-sm-12'>`
           );
           var image = $('<img>');
-          image.attr('src', optionsArray[i].largeImg).attr('class', 'port-img');
+          image.attr('src', optionsArray[i].largeImg).attr(
+               'class',
+               'port-img img-fluid'
+          );
           imgContainer.append(image);
-          newRow.append(imgContainer);
-
-          var portBody = $('<div>').attr('class', 'port-body');
+          newRow.append(imgContainer).append(infoContainer);
 
           // Row One: navigation arrows (forward and backward) for portfolio carousel
           const rowOne = $('<div class="row">');
@@ -270,13 +271,13 @@ function addPorts() {
           );
           rowFour.append(info).append(techSkills).append(techConcepts);
 
-          const projectInfo = $('<div class="projectInfo">');
-
-          portBody.append(projectInfo).append(rowOne);
+          const projectInfo = $("<div id='project-info'>");
           projectInfo.append(rowTwo).append(rowThree).append(rowFour);
 
-          infoContainer.append(portBody);
-          newDiv.append(newRow.append(infoContainer));
+          infoContainer.append(rowOne).append(projectInfo);
+
+          newDiv.append(newRow);
+
           $('#portfolio-container .carousel-inner').append(newDiv);
      }
 }
