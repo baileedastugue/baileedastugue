@@ -103,6 +103,9 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   margin-left: 5rem;
   width: 10rem;
+  height: 10vh;
+  padding-bottom: 1vh;
+  z-index: 10;
 }
 
 #portfolio-container .carousel .carousel-inner .port-info-container .port-body .indicator-container a.carousel-control-next, #portfolio-container .carousel .carousel-inner .port-info-container .port-body .indicator-container a.carousel-control-prev {
@@ -176,14 +179,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #contact-container .container .link-container {
-  padding-right: 8vw;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 43%;
 }
 
 #contact-container .container .link-container .link {
   opacity: 100%;
-  width: 10vw;
-  float: right;
-  margin-top: 15vw;
+  height: 12vh;
   margin-right: 3rem;
 }
 
@@ -197,6 +203,8 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   right: 0;
   z-index: -10;
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 #about-container {
@@ -307,7 +315,7 @@ p a:hover {
     margin-right: 1vw;
   }
   #contact-container .container .link-container {
-    padding-right: 20vw;
+    left: 40vw;
   }
 }
 
@@ -362,11 +370,11 @@ p a:hover {
   }
   #portfolio-container .carousel .carousel-inner .port-img-container {
     height: 70vh;
-    text-align: center;
   }
   #portfolio-container .carousel .carousel-inner .port-img-container img.port-img {
     max-height: 70vh;
     float: unset;
+    height: auto;
   }
   #postersCarousel {
     position: relative;
@@ -391,14 +399,28 @@ p a:hover {
 }
 
 @media (max-width: 880px) {
+  #portfolio-container {
+    padding: 0;
+  }
   #portfolio-container .carousel .carousel-inner .port-info-container {
     margin-top: 0vh;
+    padding: 0;
+  }
+  #portfolio-container .carousel .carousel-inner .port-info-container .port-body {
+    width: 100%;
+    padding: 0;
   }
   #portfolio-container .carousel .carousel-inner .port-info-container .port-body .projectInfo {
     width: 100%;
   }
   #spacer {
-    height: 1vh;
+    height: 8vh;
+  }
+  #contact-container .container .link-container {
+    left: 31vw;
+  }
+  #contact-container .container .link-container .link {
+    height: 10vh;
   }
 }
 
@@ -406,9 +428,26 @@ p a:hover {
   #spacer {
     height: 3vh;
   }
+  #contact-container .container .link-container {
+    top: 15vh;
+  }
+  #contact-container .container .link-container .link {
+    height: 8vh;
+  }
 }
 
 @media (max-width: 550px) {
+  #portfolio-container {
+    height: auto;
+  }
+  #portfolio-container .carousel .carousel-inner .port-img-container {
+    height: auto;
+    padding: 1vh;
+  }
+  #portfolio-container .carousel .carousel-inner .port-img-container img.port-img {
+    height: auto;
+    width: 100%;
+  }
   #portfolio-container .carousel .carousel-inner .port-info-container .port-body .indicator-container a.carousel-control-next {
     right: 20vw;
   }
@@ -416,7 +455,54 @@ p a:hover {
     left: 20vw;
   }
   #spacer {
-    height: 3vh;
+    height: 0vh;
+  }
+  #contact-container .container .link-container .link {
+    height: 6vh;
+  }
+}
+
+@media (max-width: 500px) {
+  #contact-container .container .link-container {
+    top: 12vh;
+    left: 25vw;
+  }
+}
+
+@media (max-width: 450px) {
+  #portfolio-container .carousel {
+    position: relative;
+  }
+  #portfolio-container .carousel .carousel-inner .port-info-container .port-body .indicator-container {
+    height: 5vh;
+    position: absolute;
+  }
+  #portfolio-container .carousel .carousel-inner .port-info-container .port-body .indicator-container p {
+    z-index: 10;
+    margin-bottom: 0vh;
+    padding-bottom: 0;
+    height: 50%;
+    margin-top: 3%;
+  }
+  #contact-container .container h1 {
+    padding-top: 0;
+  }
+  #contact-container .container .link-container {
+    top: 10vh;
+    left: 30%;
+  }
+  #contact-container .container .link-container .link {
+    height: 5vh;
+  }
+}
+
+@media (max-width: 320px) {
+  #contact-container .container .link-container {
+    top: 15vh;
+    left: 30%;
+  }
+  #contact-container .container .link-container .link {
+    height: 5vh;
   }
 }
 /*# sourceMappingURL=styles.css.map */
