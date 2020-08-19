@@ -402,6 +402,12 @@ p a:hover {
   }
 }
 
+@media (max-width: 680px) {
+  #spacer {
+    height: 3vh;
+  }
+}
+
 @media (max-width: 550px) {
   #portfolio-container .carousel .carousel-inner .port-info-container .port-body .indicator-container a.carousel-control-next {
     right: 20vw;

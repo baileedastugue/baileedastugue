@@ -407,6 +407,12 @@ p {
     }
 }
 
+@media (max-width: 680px) {
+    #spacer {
+        height: 3vh;
+    }
+}
+
 @media (max-width: 550px) {
     #portfolio-container{
         .carousel .carousel-inner {
