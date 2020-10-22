@@ -2,6 +2,6 @@ Front-end web developer with a thorough understanding of the full-stack. Eager t
 
 *Favorite tech includes:* JavaScript (ES6, JSX), React, Redux, SASS, HTML5, CSS3, MongoDB + Mongoose.js, Node.js, Express.js
 
-*Currently:* seeking full-time web development opportunities (employment or internship) in Austin, Texas | completing the following Udemy courses: AWS Certified Solutions Architect - Associate 2020, Advanced CSS and Sass, and JavaScript: The Advanced Concepts | freelancing as a front-end developer to create a website for a Texas-based small business | tutoring bootcamp students 1-on-1 to help future developers gain a deep understanding of their code
+*Currently:* completing the following Udemy courses: AWS Certified Solutions Architect - Associate 2020, Advanced CSS and Sass, and JavaScript: The Advanced Concepts | freelancing as a front-end developer to create a website for a Texas-based small business | tutoring bootcamp students 1-on-1 to help future developers gain a deep understanding of their code
 
 [Portfolio](https://baileedastugue.com/) | [LinkedIn](https://www.linkedin.com/in/bailee-dastugue/)
