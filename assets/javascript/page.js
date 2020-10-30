@@ -256,9 +256,9 @@ function addPorts() {
 
           // Row three: links
           const rowThree = $('<div class="row">');
-          const link1 = `<a href='${optionsArray[i].deployed}' target="_blank">Deployed</>`;
-          const link2 = `<a href='${optionsArray[i].gitHub}' target="_blank">GitHub Repo</a>`;
-          rowThree.append(link1).append(' | ').append(link2);
+          const link1 = `<br><br><a href='${optionsArray[i].deployed}' target="_blank">Deployed</br>`;
+          const link2 = `<a href='${optionsArray[i].gitHub}' target="_blank">GitHub Repo</a><br><br>`;
+          rowThree.append(link1).append('|').append(link2);
 
           // Row four: includes about, skills, and concepts
           const rowFour = $('<div class="row">');
