@@ -2,6 +2,4 @@ Front-end web developer with a thorough understanding of the full-stack. Eager t
 
 *Favorite tech includes:* JavaScript (ES6, JSX), React, Redux, SASS, HTML5, CSS3, MongoDB + Mongoose.js, Node.js, Express.js
 
-*Currently:* completing the following Udemy courses: AWS Certified Solutions Architect - Associate 2020, Advanced CSS and Sass, and JavaScript: The Advanced Concepts 
-
 [Portfolio](https://baileedastugue.com/) | [LinkedIn](https://www.linkedin.com/in/bailee-dastugue/)
