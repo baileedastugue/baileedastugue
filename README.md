@@ -2,4 +2,4 @@ Front-end web developer with a thorough understanding of the full-stack. Eager t
 
 *Favorite tech includes:* JavaScript (ES6, JSX), React, Redux, SASS, HTML5, CSS3, MongoDB + Mongoose.js, Node.js, Express.js
 
-[Portfolio](https://baileedastugue.com/) | [LinkedIn](https://www.linkedin.com/in/bailee-dastugue/)
+[Portfolio](https://www.baileedast.com/) | [LinkedIn](https://www.linkedin.com/in/bailee-dastugue/)
